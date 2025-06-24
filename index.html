@@ -1,143 +1,154 @@
 <!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ShubhCart - Premium Deals Warehouse</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f4f4;
-      color: #333;
-    }header {
-  background: linear-gradient(to right, #000000, #434343);
-  color: white;
-  padding: 1.5rem;
-  text-align: center;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShubhCart - Shop Like a King</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }header {
+        background-color: #1a1a1a;
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+    }
 
-header h1 {
-  font-size: 2.5rem;
-  margin: 0;
-}
+    header h1 {
+        margin: 0;
+        font-size: 28px;
+    }
 
-.subheader {
-  font-size: 1.1rem;
-  opacity: 0.9;
-}
+    .search-bar {
+        margin: 15px auto;
+        max-width: 600px;
+        display: flex;
+    }
 
-.hero {
-  background: url('https://source.unsplash.com/1600x600/?technology,gadgets') no-repeat center center/cover;
-  color: white;
-  padding: 5rem 2rem;
-  text-align: center;
-}
+    .search-bar input {
+        width: 100%;
+        padding: 12px;
+        border-radius: 5px 0 0 5px;
+        border: 1px solid #ccc;
+        outline: none;
+    }
 
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
+    .search-bar button {
+        padding: 12px 20px;
+        border: none;
+        background-color: #ff6f00;
+        color: white;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+    }
 
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-}
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
 
-.product {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  transition: transform 0.3s;
-}
+    .product-card {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: 0.3s ease;
+    }
 
-.product:hover {
-  transform: scale(1.03);
-}
+    .product-card:hover {
+        transform: translateY(-5px);
+    }
 
-.product img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-  margin-bottom: 1rem;
-}
+    .product-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
 
-.product h3 {
-  margin: 0.5rem 0;
-}
+    .product-details {
+        padding: 15px;
+    }
 
-.product p {
-  font-size: 0.9rem;
-}
+    .product-details h3 {
+        margin: 0;
+        font-size: 20px;
+    }
 
-.cta {
-  background: #000;
-  color: white;
-  padding: 2rem;
-  text-align: center;
-}
+    .product-details p {
+        margin: 5px 0;
+        font-size: 14px;
+    }
 
-.cta p {
-  font-size: 1.2rem;
-}
+    .footer {
+        background-color: #1a1a1a;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        margin-top: 30px;
+    }
+</style>
 
-footer {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
-.button {
-  background: #ff6b01;
-  border: none;
-  color: white;
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.button:hover {
-  background: #ff9001;
-}
-
-  </style>
 </head><body>
-  <header>
-    <h1>ShubhCart</h1>
-    <p class="subheader">Only Premium Deals | Verified by Warehouse Team | Limited Stock</p>
-  </header>  <div class="hero">
-    <h2>Deals That Make You Feel Like a King 👑</h2>
-    <p>Seal packed laptops, perfumes, gadgets & more directly from warehouse!</p>
-  </div>  <section class="products">
-    <div class="product">
-      <img src="https://via.placeholder.com/300x200?text=Marshall+Speaker" alt="Marshall Speaker">
-      <h3>Marshall Speaker - 37% Off</h3>
-      <p>High-end original speaker with minor box damage. Bargained personally. 100% verified.</p>
-      <button class="button">View Video & Details</button>
-    </div><div class="product">
-  <img src="https://via.placeholder.com/300x200?text=Perfume+Combo" alt="Perfume Combo">
-  <h3>Gucci | Boss | Burberry Perfume Combo</h3>
-  <p>Imported perfumes with slight scratches on bottle, full seal intact. Tested in-store authenticity.</p>
-  <button class="button">View Video & Details</button>
+    <header>
+        <h1>ShubhCart - Feel Like a King 👑</h1>
+    </header><div class="search-bar">
+    <input type="text" placeholder="Search for products (e.g. Shoes, Fridge, Perfume)">
+    <button>Search</button>
 </div>
 
-<div class="product">
-  <img src="https://via.placeholder.com/300x200?text=RO+Purifier" alt="RO Purifier">
-  <h3>Brand New RO (Seal Packed)</h3>
-  <p>Fresh stock arrived today. Warehouse verified. Brand sealed. Full video available on request.</p>
-  <button class="button">View Video & Details</button>
+<div class="product-grid">
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71Yk1xQ0H8L.jpg" alt="Marshall Speaker">
+        <div class="product-details">
+            <h3>Marshall Bluetooth Speaker</h3>
+            <p><strong>₹5,999</strong></p>
+            <p>Mint Condition, Original Sound Quality, Minor scratches on the back.</p>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71FFJFU7UFL.jpg" alt="Perfume">
+        <div class="product-details">
+            <h3>Premium Perfume - Long Lasting</h3>
+            <p><strong>₹499</strong></p>
+            <p>Unboxed piece, 90% filled, Fragrance like heaven.</p>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/61X1+NwcxRL._SX679_.jpg" alt="Nike Shoes">
+        <div class="product-details">
+            <h3>Nike Running Shoes</h3>
+            <p><strong>₹2,799</strong></p>
+            <p>Good condition, lightly used, no damage.</p>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71vZypjNkPS._SX679_.jpg" alt="Smart LED TV">
+        <div class="product-details">
+            <h3>Smart LED TV 32"</h3>
+            <p><strong>₹8,999</strong></p>
+            <p>Box packed, seal intact, fresh stock.</p>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/81bwKHrDWzL._SX679_.jpg" alt="Double Door Fridge">
+        <div class="product-details">
+            <h3>Whirlpool Fridge</h3>
+            <p><strong>₹11,499</strong></p>
+            <p>Used 6 months, small dent on side, working perfectly.</p>
+        </div>
+    </div>
 </div>
 
-  </section>  <div class="cta">
-    <p><strong>📝 Orders via WhatsApp:</strong> <br> <span style="font-size: 1.3rem;">9999999999 9999999999</span></p>
-    <p><strong>💳 UPI ID:</strong> will be added soon</p>
-    <p>🚛 Delivery available in selected areas. Full product video, real image and negotiation options available!</p>
-  </div>  <footer>
-    &copy; 2025 ShubhCart | All Rights Reserved | Built with ❤️ and psychology for buyers like you
-  </footer>
+<div class="footer">
+    <p>🛒 Cash on Delivery (COD) Available | 3 Days Return Policy on Selected Items | Contact us: 9999999999</p>
+    <p>UPI ID: will-be-added-soon@upi</p>
+</div>
+
 </body></html>
