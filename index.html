@@ -1,154 +1,186 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShubhCart - Shop Like a King</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }header {
-        background-color: #1a1a1a;
-        color: #fff;
-        padding: 15px;
-        text-align: center;
-    }
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShubhCart - Feel Like a King</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }body {
+  background-color: #f5f5f5;
+  color: #333;
+}
 
-    header h1 {
-        margin: 0;
-        font-size: 28px;
-    }
+header {
+  background-color: #0074e4;
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+}
 
-    .search-bar {
-        margin: 15px auto;
-        max-width: 600px;
-        display: flex;
-    }
+header h1 {
+  font-size: 2rem;
+}
 
-    .search-bar input {
-        width: 100%;
-        padding: 12px;
-        border-radius: 5px 0 0 5px;
-        border: 1px solid #ccc;
-        outline: none;
-    }
+.search-bar {
+  text-align: center;
+  padding: 1rem;
+}
 
-    .search-bar button {
-        padding: 12px 20px;
-        border: none;
-        background-color: #ff6f00;
-        color: white;
-        border-radius: 0 5px 5px 0;
-        cursor: pointer;
-    }
+.search-bar input {
+  width: 60%;
+  padding: 0.7rem;
+  border: 2px solid #0074e4;
+  border-radius: 10px;
+  font-size: 1rem;
+}
 
-    .product-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-        padding: 20px;
-    }
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
 
-    .product-card {
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        transition: 0.3s ease;
-    }
+.product {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
 
-    .product-card:hover {
-        transform: translateY(-5px);
-    }
+.product:hover {
+  transform: translateY(-5px);
+}
 
-    .product-card img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-    }
+.product img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+}
 
-    .product-details {
-        padding: 15px;
-    }
+.product h2 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
 
-    .product-details h3 {
-        margin: 0;
-        font-size: 20px;
-    }
+.price {
+  color: green;
+  font-weight: bold;
+}
 
-    .product-details p {
-        margin: 5px 0;
-        font-size: 14px;
-    }
+.condition, .tagline {
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
 
-    .footer {
-        background-color: #1a1a1a;
-        color: white;
-        text-align: center;
-        padding: 10px;
-        margin-top: 30px;
-    }
-</style>
+.buttons {
+  margin-top: 1rem;
+}
 
-</head><body>
-    <header>
-        <h1>ShubhCart - Feel Like a King 👑</h1>
-    </header><div class="search-bar">
-    <input type="text" placeholder="Search for products (e.g. Shoes, Fridge, Perfume)">
-    <button>Search</button>
+.buttons button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.buy-now {
+  background-color: #0074e4;
+  color: white;
+}
+
+.add-to-cart {
+  background-color: #ff9900;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #222;
+  color: white;
+  margin-top: 2rem;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ShubhCart - Feel Like a King</h1>
+    <p>COD Available | Easy Returns | Premium Quality</p>
+  </header>  <div class="search-bar">
+    <input type="text" id="search" placeholder="Search for perfumes, shoes, laptops...">
+  </div>  <div class="product-grid" id="productGrid">
+    <!-- Sample Product -->
+    <div class="product" data-name="Perfume">
+      <img src="https://images.unsplash.com/photo-1617168896959-7dc95e04f891" alt="Perfume">
+      <h2>Rishtedaar Wala Perfume</h2>
+      <p class="price">₹599 <span style="color:red; font-size:0.9rem;"> 40% OFF</span></p>
+      <p class="condition">Mint Condition</p>
+      <p class="tagline">Jab milna ho special logon se</p>
+      <div class="buttons">
+        <button class="buy-now">Buy Now</button>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div><div class="product" data-name="Laptop">
+  <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4f02" alt="Laptop">
+  <h2>HP Business Laptop</h2>
+  <p class="price">₹18,999 <span style="color:red; font-size:0.9rem;"> 60% OFF</span></p>
+  <p class="condition">Good Condition (minor scratch)</p>
+  <p class="tagline">Power-packed for working warriors</p>
+  <div class="buttons">
+    <button class="buy-now">Buy Now</button>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
 </div>
 
-<div class="product-grid">
-    <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/71Yk1xQ0H8L.jpg" alt="Marshall Speaker">
-        <div class="product-details">
-            <h3>Marshall Bluetooth Speaker</h3>
-            <p><strong>₹5,999</strong></p>
-            <p>Mint Condition, Original Sound Quality, Minor scratches on the back.</p>
-        </div>
-    </div>
-
-    <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/71FFJFU7UFL.jpg" alt="Perfume">
-        <div class="product-details">
-            <h3>Premium Perfume - Long Lasting</h3>
-            <p><strong>₹499</strong></p>
-            <p>Unboxed piece, 90% filled, Fragrance like heaven.</p>
-        </div>
-    </div>
-
-    <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/61X1+NwcxRL._SX679_.jpg" alt="Nike Shoes">
-        <div class="product-details">
-            <h3>Nike Running Shoes</h3>
-            <p><strong>₹2,799</strong></p>
-            <p>Good condition, lightly used, no damage.</p>
-        </div>
-    </div>
-
-    <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/71vZypjNkPS._SX679_.jpg" alt="Smart LED TV">
-        <div class="product-details">
-            <h3>Smart LED TV 32"</h3>
-            <p><strong>₹8,999</strong></p>
-            <p>Box packed, seal intact, fresh stock.</p>
-        </div>
-    </div>
-
-    <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/81bwKHrDWzL._SX679_.jpg" alt="Double Door Fridge">
-        <div class="product-details">
-            <h3>Whirlpool Fridge</h3>
-            <p><strong>₹11,499</strong></p>
-            <p>Used 6 months, small dent on side, working perfectly.</p>
-        </div>
-    </div>
+<div class="product" data-name="Shoes">
+  <img src="https://images.unsplash.com/photo-1606813904620-0067d4f1a88f" alt="Shoes">
+  <h2>Running Shoes</h2>
+  <p class="price">₹799 <span style="color:red; font-size:0.9rem;"> 30% OFF</span></p>
+  <p class="condition">Brand New</p>
+  <p class="tagline">Bhago... aur kamao attention!</p>
+  <div class="buttons">
+    <button class="buy-now">Buy Now</button>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
 </div>
 
-<div class="footer">
-    <p>🛒 Cash on Delivery (COD) Available | 3 Days Return Policy on Selected Items | Contact us: 9999999999</p>
-    <p>UPI ID: will-be-added-soon@upi</p>
+<div class="product" data-name="Fridge">
+  <img src="https://images.unsplash.com/photo-1624082187882-499c3a3f313e" alt="Fridge">
+  <h2>LG Single Door Fridge</h2>
+  <p class="price">₹6,499 <span style="color:red; font-size:0.9rem;"> 50% OFF</span></p>
+  <p class="condition">Used (few dents)</p>
+  <p class="tagline">Thanda rakho, tension nahi</p>
+  <div class="buttons">
+    <button class="buy-now">Buy Now</button>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
 </div>
 
-</body></html>
+  </div>  <footer>
+    <p>© 2025 ShubhCart | COD & Return Policy Applicable | Contact us: support@shubhcart.in</p>
+  </footer>  <script>
+    const searchInput = document.getElementById("search");
+    const products = document.querySelectorAll(".product");
+
+    searchInput.addEventListener("input", () => {
+      const searchTerm = searchInput.value.toLowerCase();
+      products.forEach(product => {
+        const name = product.getAttribute("data-name").toLowerCase();
+        if (name.includes(searchTerm)) {
+          product.style.display = "block";
+        } else {
+          product.style.display = "none";
+        }
+      });
+    });
+  </script></body>
+                                                         </html>
