@@ -1,243 +1,68 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShubhCart - Feel Like a King</title>
-    <style>
-        :root {
-            --primary: #2b2e4a;
-            --secondary: #e84545;
-            --bg: #f5f5f5;
-            --text: #222;
-            --accent: #903749;
-        }* {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    body {
-        background: var(--bg);
-        color: var(--text);
-    }
-
-    header {
-        background: var(--primary);
-        color: #fff;
-        padding: 1rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    nav a {
-        margin: 0 0.8rem;
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    .hero {
-        background: url('https://via.placeholder.com/1400x400') center/cover no-repeat;
-        height: 400px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        text-shadow: 1px 1px 5px #000;
-        font-size: 2rem;
-        font-weight: bold;
-    }
-
-    .categories {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 1rem;
-        padding: 1rem;
-    }
-
-    .category {
-        background: #fff;
-        padding: 1rem;
-        border-radius: 10px;
-        text-align: center;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s;
-    }
-
-    .category:hover {
-        transform: translateY(-5px);
-    }
-
-    .category img {
-        width: 100%;
-        height: 80px;
-        object-fit: contain;
-        margin-bottom: 0.5rem;
-    }
-
-    .products-section {
-        padding: 1rem;
-    }
-
-    .product-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 1.5rem;
-    }
-
-    .product {
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-        overflow: hidden;
-        transition: box-shadow 0.3s;
-    }
-
-    .product:hover {
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-    }
-
-    .product img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-    }
-
-    .product-content {
-        padding: 1rem;
-    }
-
-    .product-content h3 {
-        font-size: 1rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .price {
-        color: var(--secondary);
-        font-weight: bold;
-    }
-
-    .mrp {
-        text-decoration: line-through;
-        color: #888;
-        margin-left: 5px;
-        font-size: 0.9rem;
-    }
-
-    .condition {
-        font-size: 0.9rem;
-        color: green;
-    }
-
-    footer {
-        background: var(--primary);
-        color: #fff;
-        padding: 1rem;
-        text-align: center;
-        margin-top: 2rem;
-    }
-
-    .tagline {
-        font-size: 1rem;
-        color: var(--accent);
-        margin-top: 0.5rem;
-        font-weight: 600;
-        text-align: center;
-    }
-
-    .btn {
-        background: var(--secondary);
-        color: #fff;
-        padding: 0.5rem 1rem;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 0.5rem;
-    }
-
-    .btn:hover {
-        background: var(--accent);
-    }
-</style>
-
-</head><body>
-    <header>
-        <h1>ShubhCart</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#categories">Categories</a>
-            <a href="#offers">Offers</a>
-            <a href="#login">Login</a>
-            <a href="#cart">Cart</a>
-        </nav>
-    </header><section class="hero">
-    Ab jo log kehte the "aap luxury afford nahi kar sakte"... ab Shubhta laya hai luxury perfume for your expensive body
-</section>
-
-<section id="categories" class="categories">
-    <div class="category">
-        <img src="https://via.placeholder.com/80" alt="TV">
-        <p>TVs</p>
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TheShubhCart - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="app-header">
+    <h1>Shubh Kaam Ki Shuruaat TheShubhCart Ke Saath</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category-tv.html">TV</a></li>
+        <li><a href="category-ac.html">AC</a></li>
+        <li><a href="category-shoes.html">Shoes</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="search-section">
+    <input type="text" id="searchInput" placeholder="Search for products..." />
+    <button onclick="searchProducts()">Search</button>
+  </section>
+  <section class="product-grid" id="productGrid">
+    <div class="product-card">
+      <img src="images/perfume.jpg" alt="Luxury Perfume" />
+      <h2>Luxury Perfume</h2>
+      <p class="tagline">Ab jo log kehte the aap luxury afford nahi kar sakte... ab TheShubhCart laaya hai luxury perfume aapke liye</p>
+      <p class="price"><span class="mrp">₹1,999</span> ₹899</p>
+      <p class="condition">Condition: Seal Pack</p>
+      <a href="product-perfume.html">View Details</a>
     </div>
-    <div class="category">
-        <img src="https://via.placeholder.com/80" alt="Phones">
-        <p>Phones</p>
+    <div class="product-card">
+      <img src="images/tv.jpg" alt="Smart TV" />
+      <h2>Smart TV - LG</h2>
+      <p class="tagline">Har entertainment ab smart aur HD</p>
+      <p class="price"><span class="mrp">₹25,000</span> ₹18,499</p>
+      <p class="condition">Condition: Open Box (Minor scratches)</p>
+      <a href="product-tv.html">View Details</a>
     </div>
-    <div class="category">
-        <img src="https://via.placeholder.com/80" alt="Fridge">
-        <p>Fridges</p>
+    <!-- More product cards will be listed here -->
+  </section>
+  <footer>
+    <p>&copy; 2025 TheShubhCart. All rights reserved.</p>
+    <a href="#" onclick="showReturnPolicy()">Return Policy</a> |
+    <a href="#" onclick="showCoupons()">Coupons</a>
+  </footer>  <!-- Modals -->  <div id="returnModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Return Policy</h2>
+      <p>You can return products within 7 days of delivery if the product is damaged, defective or different from description.</p>
+      <button onclick="closeModal('returnModal')">Close</button>
     </div>
-    <div class="category">
-        <img src="https://via.placeholder.com/80" alt="Shoes">
-        <p>Shoes</p>
+  </div>
+  <div id="couponModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Available Coupons</h2>
+      <ul>
+        <li><strong>BIRTHDAY25</strong> - Flat 25% off on site birthday</li>
+        <li><strong>FESTIVE10</strong> - Get 10% off on Diwali Sale</li>
+      </ul>
+      <button onclick="closeModal('couponModal')">Close</button>
     </div>
-    <div class="category">
-        <img src="https://via.placeholder.com/80" alt="ACs">
-        <p>ACs</p>
-    </div>
-    <div class="category">
-        <img src="https://via.placeholder.com/80" alt="Speakers">
-        <p>Speakers</p>
-    </div>
-</section>
-
-<div class="tagline">
-    🚚 Fast Delivery | 🔁 Easy Return Policy | 💸 Genuine Discounts | 🔐 Secure Login
-</div>
-
-<section class="products-section">
-    <h2>Featured Products</h2>
-    <div class="product-grid">
-        <div class="product">
-            <img src="https://via.placeholder.com/220x180" alt="Product 1">
-            <div class="product-content">
-                <h3>Luxury Perfume (Touch Condition)</h3>
-                <p class="price">₹799 <span class="mrp">₹1499</span></p>
-                <p class="condition">Condition: Open Box - Minor scratches, Fragrance intact</p>
-                <button class="btn">Buy Now</button>
-            </div>
-        </div>
-
-        <div class="product">
-            <img src="https://via.placeholder.com/220x180" alt="Product 2">
-            <div class="product-content">
-                <h3>Haier AC - 1.5 Ton</h3>
-                <p class="price">₹26,999 <span class="mrp">₹39,999</span></p>
-                <p class="condition">Condition: Seal Pack - Brand New</p>
-                <button class="btn">Buy Now</button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<footer>
-    <p>&copy; 2025 ShubhCart | All rights reserved.</p>
-    <p>Return Policy | Terms & Conditions | Contact Us</p>
-</footer>
-
-</body></html>
+  </div>
+</body>
+</html><!-- Separate HTML pages (like product-perfume.html, category-tv.html, etc.) will be added next -->
