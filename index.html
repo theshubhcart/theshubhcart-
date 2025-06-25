@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ShubhCart - Feel Like a King</title>
+  <title>theShubhCart - App Style</title>
   <style>
     * {
       margin: 0;
@@ -13,113 +13,123 @@
     }
 
     body {
-      background: linear-gradient(to bottom right, #1f1c2c, #928dab);
+      background: linear-gradient(to bottom right, #2c3e50, #000000);
       color: #fff;
+      min-height: 100vh;
     }
 
-    header {
+    .app-header {
+      background: #111;
+      padding: 1rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .app-header h1 {
+      font-size: 1.8rem;
+      color: #fdd835;
       text-align: center;
-      padding: 2rem 1rem 1rem;
-      background-color: rgba(0, 0, 0, 0.6);
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      color: #ffd700;
       letter-spacing: 1px;
     }
 
     .tagline {
-      font-size: 1.1rem;
-      margin-top: 0.5rem;
-      color: #f0e68c;
+      text-align: center;
+      font-size: 1rem;
+      color: #ffd700;
+      margin-top: 0.2rem;
     }
 
     .features {
       text-align: center;
-      font-size: 0.95rem;
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
       color: #ccc;
-      margin: 1rem auto;
+      margin-bottom: 1.5rem;
     }
 
-    .category-section {
+    .category-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 25px;
-      padding: 2rem;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      padding: 1rem 1rem 2rem;
     }
 
-    .category {
-      background: rgba(255, 255, 255, 0.08);
-      border: 2px solid #ffd700;
-      border-radius: 15px;
+    .category-box {
+      background: #1f1f1f;
+      border-radius: 18px;
+      padding: 1.5rem;
       text-align: center;
-      padding: 1.5rem 1rem;
-      box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-      transition: all 0.3s ease;
+      border: 1px solid #ffd700;
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.2);
+      transition: all 0.3s ease-in-out;
     }
 
-    .category:hover {
-      background-color: #ffd700;
+    .category-box:hover {
+      background: #ffd700;
       color: #000;
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
 
-    .category a {
-      color: inherit;
+    .category-box a {
       text-decoration: none;
-      font-size: 1.2rem;
+      color: inherit;
       font-weight: bold;
+      font-size: 1.1rem;
     }
 
     footer {
       text-align: center;
-      font-size: 0.85rem;
+      padding: 1rem;
+      font-size: 0.8rem;
       color: #aaa;
-      padding: 2rem 1rem 1rem;
+      border-top: 1px solid #333;
+      margin-top: 1rem;
     }
 
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
+      .category-container {
+        grid-template-columns: 1fr;
       }
-      .category a {
-        font-size: 1rem;
+
+      .category-box {
+        padding: 1.2rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>ShubhCart</h1>
-    <p class="tagline">Luxury that defines You</p>
-    <p class="features">Trusted by Thousands | Easy Returns | Fast Delivery | COD Available</p>
-  </header>
+  <div class="app-header">
+    <h1>theShubhCart</h1>
+    <p class="tagline">Luxury that Fits in Your Pocket</p>
+    <p class="features">Easy Returns | Trusted by Thousands | Fast Delivery</p>
+  </div>
 
-  <section class="category-section">
-    <div class="category">
+  <div class="category-container">
+    <div class="category-box">
       <a href="perfume.html">Luxury Perfumes</a>
     </div>
-    <div class="category">
+    <div class="category-box">
       <a href="#">Smart TVs</a>
     </div>
-    <div class="category">
+    <div class="category-box">
       <a href="#">Bluetooth Speakers</a>
     </div>
-    <div class="category">
+    <div class="category-box">
       <a href="#">Smartphones</a>
     </div>
-    <div class="category">
+    <div class="category-box">
       <a href="#">Air Conditioners</a>
     </div>
-    <div class="category">
+    <div class="category-box">
       <a href="#">Luxury Bags</a>
     </div>
-  </section>
+  </div>
 
   <footer>
-    &copy; 2025 ShubhCart | Designed for Royals Like You 👑
+    &copy; 2025 theShubhCart | Designed for Royal Comfort 👑
   </footer>
 
 </body>
