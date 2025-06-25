@@ -1,136 +1,165 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>theShubhCart - App Style</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TheShubhCart - Luxury & Value Combined</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
+      font-family: 'Poppins', sans-serif;
+    }body {
+  background: linear-gradient(135deg, #1f1f1f, #3d2c19);
+  color: #fff;
+}
 
-    body {
-      background: linear-gradient(to bottom right, #2c3e50, #000000);
-      color: #fff;
-      min-height: 100vh;
-    }
+header {
+  background: #000;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
 
-    .app-header {
-      background: #111;
-      padding: 1rem 1.5rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-    }
+header h1 {
+  color: gold;
+  font-size: 1.8rem;
+}
 
-    .app-header h1 {
-      font-size: 1.8rem;
-      color: #fdd835;
-      text-align: center;
-      letter-spacing: 1px;
-    }
+.search-bar {
+  background: #2c2c2c;
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
 
-    .tagline {
-      text-align: center;
-      font-size: 1rem;
-      color: #ffd700;
-      margin-top: 0.2rem;
-    }
+.search-bar input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+}
 
-    .features {
-      text-align: center;
-      font-size: 0.85rem;
-      margin-top: 0.5rem;
-      color: #ccc;
-      margin-bottom: 1.5rem;
-    }
+.categories {
+  padding: 1rem;
+}
 
-    .category-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      padding: 1rem 1rem 2rem;
-    }
+.categories h2 {
+  color: #f6c453;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
 
-    .category-box {
-      background: #1f1f1f;
-      border-radius: 18px;
-      padding: 1.5rem;
-      text-align: center;
-      border: 1px solid #ffd700;
-      box-shadow: 0 0 12px rgba(255, 215, 0, 0.2);
-      transition: all 0.3s ease-in-out;
-    }
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
 
-    .category-box:hover {
-      background: #ffd700;
-      color: #000;
-      transform: scale(1.03);
-    }
+.cat-item {
+  background: #2d2d2d;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid #555;
+}
 
-    .category-box a {
-      text-decoration: none;
-      color: inherit;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
+.cat-item:hover {
+  transform: scale(1.05);
+  background: #403024;
+}
 
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.8rem;
-      color: #aaa;
-      border-top: 1px solid #333;
-      margin-top: 1rem;
-    }
+.cat-item img {
+  width: 60px;
+  margin-bottom: 0.5rem;
+}
 
-    @media (max-width: 600px) {
-      .category-container {
-        grid-template-columns: 1fr;
-      }
+.cat-item p {
+  color: #fff;
+  font-weight: 500;
+}
 
-      .category-box {
-        padding: 1.2rem;
-      }
-    }
+.tagline {
+  background: #141414;
+  padding: 1rem;
+  text-align: center;
+  color: #ffd369;
+  font-size: 1.2rem;
+}
+
+.footer {
+  background: #0f0f0f;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+.footer div span {
+  display: block;
+  margin: 0.2rem 0;
+}
+
   </style>
 </head>
 <body>
-
-  <div class="app-header">
-    <h1>theShubhCart</h1>
-    <p class="tagline">Luxury that Fits in Your Pocket</p>
-    <p class="features">Easy Returns | Trusted by Thousands | Fast Delivery</p>
+  <header>
+    <h1>TheShubhCart</h1>
+    <div class="search-bar">
+      <input type="text" placeholder="Search for Products, Brands...">
+    </div>
+  </header>  <div class="tagline">Where Luxury Meets Affordability – Explore Premium Deals Now!</div>  <section class="categories">
+    <h2>Shop by Category</h2>
+    <div class="cat-grid">
+      <div class="cat-item" onclick="location.href='perfume.html'">
+        <img src="https://cdn-icons-png.flaticon.com/512/2798/2798098.png" alt="Perfume" />
+        <p>Luxury Perfumes</p>
+      </div>
+      <div class="cat-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/706/706164.png" alt="TV" />
+        <p>Smart TVs</p>
+      </div>
+      <div class="cat-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png" alt="AC" />
+        <p>Air Conditioners</p>
+      </div>
+      <div class="cat-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/1059/1059753.png" alt="Shoes" />
+        <p>Branded Shoes</p>
+      </div>
+      <div class="cat-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/1810/1810742.png" alt="Speaker" />
+        <p>Speakers</p>
+      </div>
+      <div class="cat-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/2237/2237817.png" alt="Bags" />
+        <p>Luxury Bags</p>
+      </div>
+    </div>
+  </section>  <div class="footer">
+    <div>
+      <strong>Why TheShubhCart?</strong>
+      <span>✅ Easy Returns</span>
+      <span>🚚 Fast Delivery</span>
+      <span>🔒 100% Secure Payments</span>
+    </div>
+    <div>
+      <strong>Connect</strong>
+      <span>Instagram</span>
+      <span>WhatsApp</span>
+      <span>Email Support</span>
+    </div>
   </div>
-
-  <div class="category-container">
-    <div class="category-box">
-      <a href="perfume.html">Luxury Perfumes</a>
-    </div>
-    <div class="category-box">
-      <a href="#">Smart TVs</a>
-    </div>
-    <div class="category-box">
-      <a href="#">Bluetooth Speakers</a>
-    </div>
-    <div class="category-box">
-      <a href="#">Smartphones</a>
-    </div>
-    <div class="category-box">
-      <a href="#">Air Conditioners</a>
-    </div>
-    <div class="category-box">
-      <a href="#">Luxury Bags</a>
-    </div>
-  </div>
-
-  <footer>
-    &copy; 2025 theShubhCart | Designed for Royal Comfort 👑
-  </footer>
-
 </body>
-</html>
+  </html>
