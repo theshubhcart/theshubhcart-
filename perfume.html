@@ -1,120 +1,171 @@
-<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luxury Perfume - TheShubhCart</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f5f7fa;
-      margin: 0;
-      padding: 0;
-      color: #222;
-    }.product-container {
-  padding: 20px;
-  max-width: 900px;
-  margin: auto;
-}
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume Collection | TheShubhCart</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }header {
+        background-color: #003366;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
 
-.product-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-}
+    .tagline {
+        text-align: center;
+        color: #666;
+        margin-top: 5px;
+        font-size: 1rem;
+        font-style: italic;
+    }
 
-.product-gallery img, .product-gallery video {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
-}
+    .perfume-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 30px;
+        justify-content: center;
+    }
 
-.product-info {
-  margin-top: 25px;
-}
+    .product {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        max-width: 1200px;
+        padding: 20px;
+    }
 
-.product-title {
-  font-size: 28px;
-  font-weight: bold;
-}
+    .product img {
+        width: 300px;
+        height: auto;
+        border-radius: 12px;
+        object-fit: cover;
+    }
 
-.product-tagline {
-  color: #555;
-  font-style: italic;
-  font-size: 15px;
-  margin-top: 10px;
-}
+    .product-details {
+        flex: 1;
+        padding-left: 25px;
+    }
 
-.product-price {
-  font-size: 22px;
-  margin-top: 15px;
-  color: #2e7d32;
-}
+    .product-details h2 {
+        margin: 0;
+        color: #002244;
+    }
 
-.condition-box {
-  background-color: #e3f2fd;
-  padding: 10px;
-  margin-top: 15px;
-  border-left: 5px solid #2196f3;
-  border-radius: 8px;
-}
+    .price {
+        font-size: 1.2rem;
+        color: #b12704;
+        margin-top: 10px;
+    }
 
-.product-description {
-  margin-top: 20px;
-  line-height: 1.7;
-}
+    .condition, .cod, .rating {
+        margin: 10px 0;
+    }
 
-.return-policy {
-  background-color: #fff3e0;
-  padding: 15px;
-  border-left: 4px solid #ff9800;
-  margin-top: 25px;
-  border-radius: 8px;
-  font-size: 14px;
-}
+    .cod img {
+        width: 20px;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
 
-.back-link {
-  display: inline-block;
-  margin-top: 30px;
-  color: #1e88e5;
-  text-decoration: none;
-  font-weight: 500;
-}
+    .buy-section button {
+        margin-right: 15px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        background-color: #ff6600;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
 
-  </style>
-</head>
-<body>
-  <div class="product-container"><div class="product-gallery">
-  <img src="images/gucci_perfume.jpg" alt="Gucci Perfume" />
-  <img src="images/armani_perfume.jpg" alt="Armani Perfume" />
-  <video src="videos/gucci_demo.mp4" controls></video>
-  <video src="videos/armani_demo.mp4" controls></video>
-</div>
+    .buy-section button:hover {
+        background-color: #e65c00;
+    }
 
-<div class="product-info">
-  <h1 class="product-title">Luxury Perfume Collection - 100ml</h1>
-  <p class="product-tagline">Experience luxury on your skin with handpicked global scents curated for royalty.</p>
-  <p class="product-price">MRP: ₹1499 <s style="color: grey; font-size: 16px;">₹2499</s></p>
+    .video-section {
+        margin-top: 20px;
+    }
 
-  <div class="condition-box">
-    <strong>Condition:</strong> Excellent condition, rarely used for demo display. Outer box slightly opened.
-  </div>
+    .video-section iframe {
+        width: 100%;
+        height: 250px;
+        border: none;
+        border-radius: 10px;
+    }
 
-  <div class="product-description">
-    <p>Our premium perfume selection includes exclusive fragrances from top brands like Gucci, Armani, and Dior. Each bottle is authentic, carefully tested, and packaged with care to ensure an unforgettable scent experience.</p>
-    <p>Perfect for gifting, special occasions, or daily confidence – TheShubhCart perfumes are your signature in a bottle.</p>
-  </div>
+    .return-policy {
+        margin-top: 15px;
+        font-size: 0.95rem;
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-left: 5px solid #003366;
+        border-radius: 5px;
+    }
+</style>
 
-  <div class="return-policy">
-    <strong>Return Policy:</strong><br>
-    Returns are accepted if the product received is different from what is shown in the images or demo videos, or if the product is not working as intended. In such cases, an instant refund or replacement will be provided within 5 minutes. However, cosmetic damages like scratches or dents do not qualify for return.
-  </div>
+</head><body>
+    <header>
+        TheShubhCart Perfume Collection
+        <div class="tagline">Shubh kaam ki shuruaat TheShubhCart ke sath</div>
+    </header><section class="perfume-section">
+    <!-- GUCCI PERFUME -->
+    <div class="product">
+        <img src="https://i.imgur.com/AX6hJ0p.jpg" alt="Gucci Perfume">
+        <div class="product-details">
+            <h2>Gucci Bloom Eau de Parfum</h2>
+            <div class="rating">⭐⭐⭐⭐☆ (4.2/5 based on 1540 reviews)</div>
+            <div class="price">₹6,999 <del>₹9,999</del> (30% OFF)</div>
+            <div class="condition">Condition: Brand New • Sealed Box</div>
+            <div class="cod"><img src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png" alt="COD icon"> Cash on Delivery Available</div>
+            <div class="buy-section">
+                <button>Buy Now</button>
+                <button>Add to Cart</button>
+            </div>
+            <div class="video-section">
+                <iframe src="https://www.youtube.com/embed/b5TkD3g8_kg" allowfullscreen></iframe>
+            </div>
+            <div class="return-policy">
+                Return Policy: If the item you receive is different from what's shown in the images/videos or if it's not working, you are eligible for return. Instant refund/replacement within 5 minutes. However, cosmetic damages are not covered under returns.
+            </div>
+        </div>
+    </div>
 
-  <a href="index.html" class="back-link">← Back to Home</a>
-</div>
+    <!-- ARMANI PERFUME -->
+    <div class="product">
+        <img src="https://i.imgur.com/mzWpdpz.jpg" alt="Armani Perfume">
+        <div class="product-details">
+            <h2>Armani Code Absolu</h2>
+            <div class="rating">⭐⭐⭐⭐⭐ (4.8/5 based on 1980 reviews)</div>
+            <div class="price">₹5,499 <del>₹7,499</del> (26% OFF)</div>
+            <div class="condition">Condition: Open Box • Like New</div>
+            <div class="cod"><img src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png" alt="COD icon"> Cash on Delivery Available</div>
+            <div class="buy-section">
+                <button>Buy Now</button>
+                <button>Add to Cart</button>
+            </div>
+            <div class="video-section">
+                <iframe src="https://www.youtube.com/embed/YZ-F_t2XnAo" allowfullscreen></iframe>
+            </div>
+            <div class="return-policy">
+                Return Policy: Product eligible for instant return if it does not match description or is non-functional. Cosmetic issues not eligible for return.
+            </div>
+        </div>
+    </div>
 
-  </div>
-</body>
-    </html>
+    <!-- Add more perfumes similarly -->
+
+</section>
+
+</body></html>
