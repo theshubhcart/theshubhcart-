@@ -1,90 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ShubhCart - Luxury Shopping</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShubhCart - Feel Like a King</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
+
     body {
-      background: linear-gradient(to bottom right, #d4af37, #ff914d);
-      color: #fff;
+      background: #f7f9fc;
+      color: #111;
     }
+
     header {
-      background-color: #000;
+      background: linear-gradient(90deg, #050505, #1e1e1e);
+      color: #fff;
       padding: 1rem;
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
+
     header h1 {
-      color: #FFD700;
-      font-size: 2rem;
+      font-size: 1.6rem;
+      color: gold;
     }
-    .tagline {
+
+    .search-bar {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .search-bar input {
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .search-bar button {
+      padding: 0.5rem 1rem;
+      background: gold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .hero {
+      padding: 2rem;
       text-align: center;
-      font-size: 1.1rem;
-      margin-top: 0.5rem;
-      color: #fff8dc;
+      background: url('https://i.imgur.com/U0VmVZx.jpg') no-repeat center center/cover;
+      color: white;
     }
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 20px;
+
+    .hero h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      text-shadow: 1px 1px 5px #000;
+    }
+
+    .categories, .products {
       padding: 2rem;
     }
-    .category {
-      background-color: rgba(0, 0, 0, 0.7);
-      border: 2px solid #ffd700;
-      border-radius: 10px;
-      padding: 1.2rem;
-      text-align: center;
+
+    .section-title {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: #222;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
       cursor: pointer;
-      transition: transform 0.3s, background 0.3s;
     }
-    .category:hover {
-      background-color: #ffd700;
-      color: #000;
-      transform: scale(1.05);
+
+    .product-card:hover {
+      transform: translateY(-5px);
     }
-    .category a {
-      text-decoration: none;
-      color: inherit;
-      font-weight: bold;
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 1rem;
+    }
+
+    .product-info h3 {
       font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      color: green;
+      font-weight: bold;
+    }
+
+    .mrp {
+      text-decoration: line-through;
+      color: #999;
+      margin-left: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .cod-icon {
+      display: inline-block;
+      background: #4caf50;
+      color: white;
+      font-size: 0.75rem;
+      padding: 2px 6px;
+      border-radius: 8px;
+      margin-left: 0.5rem;
+    }
+
+    footer {
+      padding: 2rem;
+      text-align: center;
+      background: #222;
+      color: #bbb;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
-<body>
 
+<body>
   <header>
     <h1>ShubhCart</h1>
-    <p class="tagline">Luxury that defines You</p>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for TVs, Shoes, Bags...">
+      <button onclick="searchProduct()">Search</button>
+    </div>
   </header>
 
-  <section class="categories">
-    <div class="category">
-      <a href="perfume.html">Perfumes</a>
-    </div>
-    <div class="category">
-      <a href="#">Smart TVs</a>
-    </div>
-    <div class="category">
-      <a href="#">Speakers</a>
-    </div>
-    <div class="category">
-      <a href="#">Smartphones</a>
-    </div>
-    <div class="category">
-      <a href="#">Air Conditioners</a>
-    </div>
-    <div class="category">
-      <a href="#">Luxury Bags</a>
+  <section class="hero">
+    <h2>Ab jo log aapse kehte the aap luxury afford nahi kar sakte,<br> ab Shubhta aapke liye laya hai luxury perfume for your expensive body</h2>
+  </section>
+
+  <section class="products">
+    <h2 class="section-title">Trending Products</h2>
+    <div class="product-grid" id="productGrid">
+      <div class="product-card" onclick="location.href='product_tv.html'">
+        <img src="https://i.imgur.com/fTVRzIb.jpg" alt="4K Smart TV">
+        <div class="product-info">
+          <h3>Panasonic 4K Smart TV</h3>
+          <div class="price">₹28,999 <span class="mrp">₹44,990</span><span class="cod-icon">COD</span></div>
+        </div>
+      </div>
+      <div class="product-card" onclick="location.href='product_shoe.html'">
+        <img src="https://i.imgur.com/ZpdcX4r.jpg" alt="Nike Air Jordan">
+        <div class="product-info">
+          <h3>Nike Air Jordan</h3>
+          <div class="price">₹7,999 <span class="mrp">₹13,499</span><span class="cod-icon">COD</span></div>
+        </div>
+      </div>
+      <div class="product-card" onclick="location.href='product_bag.html'">
+        <img src="https://i.imgur.com/dLYdflo.jpg" alt="Luxury Handbag">
+        <div class="product-info">
+          <h3>Bellman Paris Bag</h3>
+          <div class="price">₹5,999 <span class="mrp">₹10,000</span><span class="cod-icon">COD</span></div>
+        </div>
+      </div>
     </div>
   </section>
 
+  <footer>
+    <p>&copy; 2025 ShubhCart. All rights reserved. Designed with passion.</p>
+  </footer>
+
+  <script>
+    function searchProduct() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const products = document.querySelectorAll('.product-card');
+      products.forEach(card => {
+        const name = card.innerText.toLowerCase();
+        card.style.display = name.includes(input) ? 'block' : 'none';
+      });
+    }
+  </script>
 </body>
-</html>
+
+  </html>
+  
