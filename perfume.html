@@ -1,234 +1,120 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Perfume - theshubhcart</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxury Perfume - TheShubhCart</title>
+  <link rel="stylesheet" href="css/style.css" />
   <style>
-    * {
-      box-sizing: border-box;
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f7fa;
       margin: 0;
       padding: 0;
-      font-family: 'Poppins', sans-serif;
-    }
+      color: #222;
+    }.product-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
 
-    body {
-      background: #f8f9fa;
-      color: #333;
-    }
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
 
-    header {
-      background-color: #202842;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 22px;
-      font-weight: bold;
-    }
+.product-gallery img, .product-gallery video {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
 
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px;
-    }
+.product-info {
+  margin-top: 25px;
+}
 
-    .product-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
+.product-title {
+  font-size: 28px;
+  font-weight: bold;
+}
 
-    .images {
-      display: flex;
-      gap: 10px;
-      overflow-x: scroll;
-    }
+.product-tagline {
+  color: #555;
+  font-style: italic;
+  font-size: 15px;
+  margin-top: 10px;
+}
 
-    .images img {
-      width: 200px;
-      height: auto;
-      border-radius: 10px;
-      border: 2px solid #ccc;
-    }
+.product-price {
+  font-size: 22px;
+  margin-top: 15px;
+  color: #2e7d32;
+}
 
-    .tagline {
-      background: #ffedf0;
-      padding: 10px;
-      margin: 20px 0;
-      font-size: 18px;
-      font-weight: 600;
-      color: #c0392b;
-      border-left: 5px solid #c0392b;
-    }
+.condition-box {
+  background-color: #e3f2fd;
+  padding: 10px;
+  margin-top: 15px;
+  border-left: 5px solid #2196f3;
+  border-radius: 8px;
+}
 
-    .price {
-      font-size: 22px;
-      color: #27ae60;
-      margin-top: 10px;
-    }
+.product-description {
+  margin-top: 20px;
+  line-height: 1.7;
+}
 
-    .mrp {
-      text-decoration: line-through;
-      color: gray;
-      font-size: 16px;
-      margin-left: 10px;
-    }
+.return-policy {
+  background-color: #fff3e0;
+  padding: 15px;
+  border-left: 4px solid #ff9800;
+  margin-top: 25px;
+  border-radius: 8px;
+  font-size: 14px;
+}
 
-    .condition {
-      background: #eaf6ff;
-      padding: 15px;
-      border-left: 5px solid #3498db;
-      margin-top: 20px;
-    }
+.back-link {
+  display: inline-block;
+  margin-top: 30px;
+  color: #1e88e5;
+  text-decoration: none;
+  font-weight: 500;
+}
 
-    .cod {
-      display: flex;
-      align-items: center;
-      margin-top: 10px;
-      gap: 8px;
-      color: #16a085;
-      font-weight: bold;
-    }
-
-    .cod img {
-      width: 20px;
-      height: 20px;
-    }
-
-    .buy-btn {
-      margin-top: 30px;
-      padding: 12px 25px;
-      font-size: 18px;
-      background-color: #202842;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .buy-btn:hover {
-      background-color: #1a1f34;
-    }
-
-    .return-policy {
-      margin-top: 20px;
-      text-decoration: underline;
-      color: #2980b9;
-      cursor: pointer;
-    }
-
-    /* Modal */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 99;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
-    }
-
-    .modal-content {
-      background: white;
-      margin: 10% auto;
-      padding: 20px;
-      width: 90%;
-      max-width: 500px;
-      border-radius: 8px;
-    }
-
-    .modal-content h3 {
-      margin-bottom: 10px;
-    }
-
-    .close {
-      float: right;
-      font-size: 22px;
-      cursor: pointer;
-      color: red;
-    }
-
-    @media (min-width: 768px) {
-      .product-grid {
-        flex-direction: row;
-      }
-
-      .images {
-        flex-direction: column;
-        max-height: 500px;
-        overflow-y: scroll;
-        overflow-x: hidden;
-      }
-
-      .images img {
-        width: 250px;
-      }
-    }
   </style>
 </head>
 <body>
+  <div class="product-container"><div class="product-gallery">
+  <img src="images/gucci_perfume.jpg" alt="Gucci Perfume" />
+  <img src="images/armani_perfume.jpg" alt="Armani Perfume" />
+  <video src="videos/gucci_demo.mp4" controls></video>
+  <video src="videos/armani_demo.mp4" controls></video>
+</div>
 
-  <header>
-    theshubhcart - Perfume
-  </header>
+<div class="product-info">
+  <h1 class="product-title">Luxury Perfume Collection - 100ml</h1>
+  <p class="product-tagline">Experience luxury on your skin with handpicked global scents curated for royalty.</p>
+  <p class="product-price">MRP: ₹1499 <s style="color: grey; font-size: 16px;">₹2499</s></p>
 
-  <div class="container">
-
-    <div class="product-grid">
-      <div class="images">
-        <img src="https://via.placeholder.com/200x250?text=Perfume+1" alt="Perfume Image 1">
-        <img src="https://via.placeholder.com/200x250?text=Perfume+2" alt="Perfume Image 2">
-        <img src="https://via.placeholder.com/200x250?text=Perfume+3" alt="Perfume Image 3">
-      </div>
-      <div class="info">
-        <div class="tagline">
-          "Ab jo log kehte the aap luxury afford nahi kar sakte... <strong>theshubhcart</strong> laya hai luxury perfume for your expensive body!"
-        </div>
-        <h2>Luxury Perfume - French Aroma 100ml</h2>
-        <div class="price">₹999 <span class="mrp">₹1999</span> <span style="color: red;">(50% OFF)</span></div>
-
-        <div class="condition">
-          <strong>Condition:</strong> Open Box, Slight scratches on cap. 100% Genuine Product. Unused, Verified by warehouse QC team.
-        </div>
-
-        <div class="cod">
-          <img src="https://cdn-icons-png.flaticon.com/512/929/929416.png" alt="COD Icon">
-          Cash on Delivery Available
-        </div>
-
-        <button class="buy-btn">Buy Now</button>
-
-        <div class="return-policy" onclick="showModal()">Return Policy</div>
-      </div>
-    </div>
+  <div class="condition-box">
+    <strong>Condition:</strong> Excellent condition, rarely used for demo display. Outer box slightly opened.
   </div>
 
-  <!-- Modal -->
-  <div id="returnModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h3>Return Policy</h3>
-      <p>You can return this product within 7 days of delivery if the item is unused and in the same condition as received. Scratched or tampered items will not be accepted for return.</p>
-      <p>Refund will be processed within 3–5 business days after quality check.</p>
-    </div>
+  <div class="product-description">
+    <p>Our premium perfume selection includes exclusive fragrances from top brands like Gucci, Armani, and Dior. Each bottle is authentic, carefully tested, and packaged with care to ensure an unforgettable scent experience.</p>
+    <p>Perfect for gifting, special occasions, or daily confidence – TheShubhCart perfumes are your signature in a bottle.</p>
   </div>
 
-  <script>
-    function showModal() {
-      document.getElementById('returnModal').style.display = 'block';
-    }
-    function closeModal() {
-      document.getElementById('returnModal').style.display = 'none';
-    }
+  <div class="return-policy">
+    <strong>Return Policy:</strong><br>
+    Returns are accepted if the product received is different from what is shown in the images or demo videos, or if the product is not working as intended. In such cases, an instant refund or replacement will be provided within 5 minutes. However, cosmetic damages like scratches or dents do not qualify for return.
+  </div>
 
-    // Close modal on click outside
-    window.onclick = function(e) {
-      if (e.target == document.getElementById('returnModal')) {
-        closeModal();
-      }
-    }
-  </script>
+  <a href="index.html" class="back-link">← Back to Home</a>
+</div>
 
+  </div>
 </body>
-  </html>
+    </html>
