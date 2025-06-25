@@ -1,91 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Perfume Brands</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfume Brands - ShubhCart</title>
   <style>
     body {
       margin: 0;
+      padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #1f1c2c, #928dab); /* Dark gradient */
-      color: #fff;
+      background-color: #fdf6f0;
     }
     h1 {
       text-align: center;
-      padding: 30px 10px;
-      font-size: 2.5rem;
-      color: #ffffff;
+      font-size: 2.5em;
+      margin: 20px 0;
+      color: #333;
     }
-    .brand-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      padding: 20px 40px;
+    .brand-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
     }
-    .card {
-      position: relative;
-      background-color: #ffffff;
-      border-radius: 20px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-      overflow: hidden;
+    .brand-card {
+      width: 200px;
+      height: 240px;
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 20px 10px;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
     }
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.4);
+    .brand-card:hover {
+      transform: scale(1.05);
     }
-    .card img {
-      width: 100%;
-      height: 150px;
+    .brand-card img {
+      width: 100px;
+      height: 100px;
       object-fit: contain;
-      background-color: #f8f8f8;
-      padding: 15px;
+      margin-bottom: 15px;
     }
     .brand-name {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-weight: 700;
-      font-size: 1.6rem;
-      color: #111;
-      pointer-events: none;
-    }
-    .brand-link {
-      display: block;
-      padding: 60px 10px 20px;
-      font-size: 1.2rem;
-      color: #444;
-      text-decoration: none;
-      font-weight: 600;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #222;
     }
   </style>
 </head>
-<body>
-  <h1>Explore Premium Perfume Brands</h1>
-  <div class="brand-grid">
-    <a href="gucci.html" class="card">
-      <img src="https://1000logos.net/wp-content/uploads/2017/06/Gucci-logo.png" alt="Gucci" />
-      <div class="brand-name">Gucci</div>
-    </a>
-    <a href="chanel.html" class="card">
-      <img src="https://1000logos.net/wp-content/uploads/2017/05/Chanel-logo.png" alt="Chanel" />
-      <div class="brand-name">Chanel</div>
-    </a>
-    <a href="boss.html" class="card">
-      <img src="https://1000logos.net/wp-content/uploads/2021/06/Hugo-Boss-logo.png" alt="Boss" />
-      <div class="brand-name">Boss</div>
-    </a>
-    <a href="zara.html" class="card">
-      <img src="https://1000logos.net/wp-content/uploads/2017/05/Zara-logo.png" alt="Zara" />
-      <div class="brand-name">Zara</div>
-    </a>
-    <a href="burberry.html" class="card">
-      <img src="https://1000logos.net/wp-content/uploads/2017/06/Burberry-logo.png" alt="Burberry" />
-      <div class="brand-name">Burberry</div>
-    </a>
-  </div>
-</body>
+<body><h1>Explore Premium Perfume Brands</h1>
+<div class="brand-container">
+  <a href="gucci.html" class="brand-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Gucci_Logo.svg" alt="Gucci">
+    <div class="brand-name">Gucci</div>
+  </a>
+  <a href="chanel.html" class="brand-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Chanel_logo_interlocking_cs.svg" alt="Chanel">
+    <div class="brand-name">Chanel</div>
+  </a>
+  <a href="boss.html" class="brand-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Hugo-Boss-Logo.svg" alt="Hugo Boss">
+    <div class="brand-name">Boss</div>
+  </a>
+  <a href="zara.html" class="brand-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="Zara">
+    <div class="brand-name">Zara</div>
+  </a>
+  <a href="burberry.html" class="brand-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Burberry_Logo_01.svg" alt="Burberry">
+    <div class="brand-name">Burberry</div>
+  </a>
+</div></body>
 </html>
