@@ -1,171 +1,114 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfume Collection | TheShubhCart</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f7f7f7;
-            color: #333;
-        }header {
-        background-color: #003366;
-        color: white;
-        padding: 1rem;
-        text-align: center;
-        font-size: 1.8rem;
-        font-weight: bold;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perfume Brands - ShubhCart</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
     }
 
-    .tagline {
-        text-align: center;
-        color: #666;
-        margin-top: 5px;
-        font-size: 1rem;
-        font-style: italic;
+    header {
+      background: linear-gradient(to right, #1d1d1d, #3d3d3d);
+      color: white;
+      padding: 20px;
+      text-align: center;
     }
 
-    .perfume-section {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        padding: 30px;
-        justify-content: center;
+    h1 {
+      margin: 0;
+      font-size: 32px;
     }
 
-    .product {
-        background-color: white;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        display: flex;
-        flex-direction: row;
-        width: 90%;
-        max-width: 1200px;
-        padding: 20px;
+    .brand-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 30px;
     }
 
-    .product img {
-        width: 300px;
-        height: auto;
-        border-radius: 12px;
-        object-fit: cover;
+    .brand-card {
+      width: 200px;
+      height: 220px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      color: black;
+      transition: all 0.3s ease;
+      position: relative;
     }
 
-    .product-details {
-        flex: 1;
-        padding-left: 25px;
+    .brand-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
     }
 
-    .product-details h2 {
-        margin: 0;
-        color: #002244;
+    .brand-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-top: 20px;
     }
 
-    .price {
-        font-size: 1.2rem;
-        color: #b12704;
-        margin-top: 10px;
+    .brand-name {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
     }
 
-    .condition, .cod, .rating {
-        margin: 10px 0;
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: #ccc;
     }
+  </style>
+</head>
+<body>
 
-    .cod img {
-        width: 20px;
-        vertical-align: middle;
-        margin-right: 5px;
-    }
+<header>
+  <h1>Choose Your Perfume Brand</h1>
+</header>
 
-    .buy-section button {
-        margin-right: 15px;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 8px;
-        background-color: #ff6600;
-        color: white;
-        font-weight: bold;
-        cursor: pointer;
-        transition: background 0.3s ease;
-    }
+<div class="brand-container">
+  <a href="gucci.html" class="brand-card">
+    <img src="https://1000logos.net/wp-content/uploads/2017/05/Gucci-logo.png" alt="Gucci">
+    <div class="brand-name">Gucci</div>
+  </a>
 
-    .buy-section button:hover {
-        background-color: #e65c00;
-    }
+  <a href="armani.html" class="brand-card">
+    <img src="https://1000logos.net/wp-content/uploads/2017/05/Armani-logo.png" alt="Armani">
+    <div class="brand-name">Armani</div>
+  </a>
 
-    .video-section {
-        margin-top: 20px;
-    }
+  <a href="boss.html" class="brand-card">
+    <img src="https://1000logos.net/wp-content/uploads/2017/05/Hugo-Boss-logo.png" alt="Boss">
+    <div class="brand-name">Boss</div>
+  </a>
 
-    .video-section iframe {
-        width: 100%;
-        height: 250px;
-        border: none;
-        border-radius: 10px;
-    }
+  <a href="zara.html" class="brand-card">
+    <img src="https://1000logos.net/wp-content/uploads/2017/05/Zara-logo.png" alt="Zara">
+    <div class="brand-name">Zara</div>
+  </a>
 
-    .return-policy {
-        margin-top: 15px;
-        font-size: 0.95rem;
-        background-color: #f0f0f0;
-        padding: 10px;
-        border-left: 5px solid #003366;
-        border-radius: 5px;
-    }
-</style>
+  <a href="chanel.html" class="brand-card">
+    <img src="https://1000logos.net/wp-content/uploads/2017/05/Chanel-logo.png" alt="Chanel">
+    <div class="brand-name">Chanel</div>
+  </a>
+</div>
 
-</head><body>
-    <header>
-        TheShubhCart Perfume Collection
-        <div class="tagline">Shubh kaam ki shuruaat TheShubhCart ke sath</div>
-    </header><section class="perfume-section">
-    <!-- GUCCI PERFUME -->
-    <div class="product">
-        <img src="https://i.imgur.com/AX6hJ0p.jpg" alt="Gucci Perfume">
-        <div class="product-details">
-            <h2>Gucci Bloom Eau de Parfum</h2>
-            <div class="rating">⭐⭐⭐⭐☆ (4.2/5 based on 1540 reviews)</div>
-            <div class="price">₹6,999 <del>₹9,999</del> (30% OFF)</div>
-            <div class="condition">Condition: Brand New • Sealed Box</div>
-            <div class="cod"><img src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png" alt="COD icon"> Cash on Delivery Available</div>
-            <div class="buy-section">
-                <button>Buy Now</button>
-                <button>Add to Cart</button>
-            </div>
-            <div class="video-section">
-                <iframe src="https://www.youtube.com/embed/b5TkD3g8_kg" allowfullscreen></iframe>
-            </div>
-            <div class="return-policy">
-                Return Policy: If the item you receive is different from what's shown in the images/videos or if it's not working, you are eligible for return. Instant refund/replacement within 5 minutes. However, cosmetic damages are not covered under returns.
-            </div>
-        </div>
-    </div>
+<footer>
+  &copy; 2025 ShubhCart - All rights reserved.
+</footer>
 
-    <!-- ARMANI PERFUME -->
-    <div class="product">
-        <img src="https://i.imgur.com/mzWpdpz.jpg" alt="Armani Perfume">
-        <div class="product-details">
-            <h2>Armani Code Absolu</h2>
-            <div class="rating">⭐⭐⭐⭐⭐ (4.8/5 based on 1980 reviews)</div>
-            <div class="price">₹5,499 <del>₹7,499</del> (26% OFF)</div>
-            <div class="condition">Condition: Open Box • Like New</div>
-            <div class="cod"><img src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png" alt="COD icon"> Cash on Delivery Available</div>
-            <div class="buy-section">
-                <button>Buy Now</button>
-                <button>Add to Cart</button>
-            </div>
-            <div class="video-section">
-                <iframe src="https://www.youtube.com/embed/YZ-F_t2XnAo" allowfullscreen></iframe>
-            </div>
-            <div class="return-policy">
-                Return Policy: Product eligible for instant return if it does not match description or is non-functional. Cosmetic issues not eligible for return.
-            </div>
-        </div>
-    </div>
-
-    <!-- Add more perfumes similarly -->
-
-</section>
-
-</body></html>
+</body>
+</html>
