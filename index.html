@@ -1,68 +1,65 @@
-<!DOCTYPE html><html lang="en">
-<head>
+<!-- theshubhcart.com | Full E-commerce HTML Template Starting Point --><!-- ✅ STEP 1: HOME PAGE SKELETON WITH PRODUCT LISTINGS & CATEGORY LINKS --><!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TheShubhCart - Home</title>
+  <title>ShubhCart - Shubh kam ki shuruaat</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
-</head>
-<body>
-  <header class="app-header">
-    <h1>Shubh Kaam Ki Shuruaat TheShubhCart Ke Saath</h1>
-    <nav>
+</head><body>
+  <header class="header">
+    <div class="logo">theShubhCart</div>
+    <nav class="navbar">
+      <input type="text" id="searchBar" placeholder="Search for products..." />
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="category-tv.html">TV</a></li>
-        <li><a href="category-ac.html">AC</a></li>
+        <li><a href="category-tv.html">TVs</a></li>
         <li><a href="category-shoes.html">Shoes</a></li>
-        <li><a href="login.html">Login</a></li>
         <li><a href="cart.html">Cart</a></li>
+        <li><a href="login.html">Login</a></li>
       </ul>
     </nav>
-  </header>
-  <section class="search-section">
-    <input type="text" id="searchInput" placeholder="Search for products..." />
-    <button onclick="searchProducts()">Search</button>
-  </section>
-  <section class="product-grid" id="productGrid">
-    <div class="product-card">
-      <img src="images/perfume.jpg" alt="Luxury Perfume" />
-      <h2>Luxury Perfume</h2>
-      <p class="tagline">Ab jo log kehte the aap luxury afford nahi kar sakte... ab TheShubhCart laaya hai luxury perfume aapke liye</p>
-      <p class="price"><span class="mrp">₹1,999</span> ₹899</p>
-      <p class="condition">Condition: Seal Pack</p>
-      <a href="product-perfume.html">View Details</a>
-    </div>
-    <div class="product-card">
-      <img src="images/tv.jpg" alt="Smart TV" />
-      <h2>Smart TV - LG</h2>
-      <p class="tagline">Har entertainment ab smart aur HD</p>
-      <p class="price"><span class="mrp">₹25,000</span> ₹18,499</p>
-      <p class="condition">Condition: Open Box (Minor scratches)</p>
-      <a href="product-tv.html">View Details</a>
-    </div>
-    <!-- More product cards will be listed here -->
-  </section>
-  <footer>
-    <p>&copy; 2025 TheShubhCart. All rights reserved.</p>
-    <a href="#" onclick="showReturnPolicy()">Return Policy</a> |
-    <a href="#" onclick="showCoupons()">Coupons</a>
-  </footer>  <!-- Modals -->  <div id="returnModal" class="modal hidden">
+  </header>  <section class="hero">
+    <h1>Shubh kam ki shuruaat <span class="highlight">theShubhCart</span> ke sath</h1>
+    <p>Warehouse deals | Best prices | Mint & Scratch-checked products</p>
+  </section>  <section class="product-grid">
+    <article class="product-card">
+      <a href="product-perfume.html">
+        <img src="images/perfume.jpg" alt="Luxury Perfume" />
+        <h2>Luxury Perfume</h2>
+        <p class="tagline">Ab jo log kehte the aap luxury afford nahi kar sakte, ab Shubhta laaya hai luxury perfume for your expensive body.</p>
+        <p class="price">₹999 <span class="mrp">₹1999</span></p>
+      </a>
+    </article><article class="product-card">
+  <a href="product-tv.html">
+    <img src="images/tv.jpg" alt="Smart TV" />
+    <h2>Samsung 43" Smart TV</h2>
+    <p class="tagline">Cinema ka maza, ghar par. Seal Pack condition.</p>
+    <p class="price">₹17,499 <span class="mrp">₹22,999</span></p>
+  </a>
+</article>
+
+<article class="product-card">
+  <a href="product-shoes.html">
+    <img src="images/shoes.jpg" alt="Running Shoes" />
+    <h2>Nike Running Shoes</h2>
+    <p class="tagline">Warehouse deal | Slightly used | ₹5000 ki feeling ₹1499 mein.</p>
+    <p class="price">₹1,499 <span class="mrp">₹4,999</span></p>
+  </a>
+</article>
+
+  </section>  <footer>
+    <p>&copy; 2025 theShubhCart. All rights reserved.</p>
+    <p><a href="#" id="returnPolicyLink">Return Policy</a> | <a href="#" id="couponLink">Apply Coupon</a></p>
+  </footer>  <!-- MODALS -->  <div id="returnModal" class="modal hidden">
     <div class="modal-content">
+      <span class="close" id="closeReturn">&times;</span>
       <h2>Return Policy</h2>
-      <p>You can return products within 7 days of delivery if the product is damaged, defective or different from description.</p>
-      <button onclick="closeModal('returnModal')">Close</button>
+      <p>Products can be returned within 7 days if damaged, faulty or not as described. Warehouse stock items are sold "as-is" unless marked seal-packed.</p>
     </div>
-  </div>
-  <div id="couponModal" class="modal hidden">
+  </div>  <div id="couponModal" class="modal hidden">
     <div class="modal-content">
-      <h2>Available Coupons</h2>
-      <ul>
-        <li><strong>BIRTHDAY25</strong> - Flat 25% off on site birthday</li>
-        <li><strong>FESTIVE10</strong> - Get 10% off on Diwali Sale</li>
-      </ul>
-      <button onclick="closeModal('couponModal')">Close</button>
+      <span class="close" id="closeCoupon">&times;</span>
+      <h2>Apply Coupon</h2>
+      <p>Use <code>SHUBH50</code> to get ₹50 off your first order!</p>
     </div>
-  </div>
-</body>
-</html><!-- Separate HTML pages (like product-perfume.html, category-tv.html, etc.) will be added next -->
+  </div></body>
+          </html>
