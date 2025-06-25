@@ -1,174 +1,126 @@
-<!-- theshubhcart.com | Full E-commerce HTML Template Starting Point -->
-<!-- ✅ STEP 1: HOME PAGE SKELETON WITH PRODUCT LISTINGS & CATEGORY LINKS -->
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ShubhCart - Shubh kam ki shuruaat</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-</head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShubhCart - Feel Like a King</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
+    body {
+      background: linear-gradient(to bottom right, #1f1c2c, #928dab);
+      color: #fff;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #ffd700;
+      letter-spacing: 1px;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+      color: #f0e68c;
+    }
+
+    .features {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #ccc;
+      margin: 1rem auto;
+    }
+
+    .category-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 25px;
+      padding: 2rem;
+    }
+
+    .category {
+      background: rgba(255, 255, 255, 0.08);
+      border: 2px solid #ffd700;
+      border-radius: 15px;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .category:hover {
+      background-color: #ffd700;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    .category a {
+      color: inherit;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #aaa;
+      padding: 2rem 1rem 1rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .category a {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
 <body>
-  <header class="header">
-    <div class="logo">theShubhCart</div>
-    <nav class="navbar">
-      <input type="text" id="searchBar" placeholder="Search for products..." />
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="category-tv.html">TVs</a></li>
-        <li><a href="category-shoes.html">Shoes</a></li>
-        <li><a href="cart.html">Cart</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
-    </nav>
+
+  <header>
+    <h1>ShubhCart</h1>
+    <p class="tagline">Luxury that defines You</p>
+    <p class="features">Trusted by Thousands | Easy Returns | Fast Delivery | COD Available</p>
   </header>
 
-  <section class="hero">
-    <h1>Shubh kam ki shuruaat <span class="highlight">theShubhCart</span> ke sath</h1>
-    <p>Warehouse deals | Best prices | Mint & Scratch-checked products</p>
-  </section>
-
-  <section class="product-grid">
-    <article class="product-card">
-      <a href="product-perfume.html">
-        <img src="images/perfume.jpg" alt="Luxury Perfume" />
-        <h2>Luxury Perfume</h2>
-        <p class="tagline">Ab jo log kehte the aap luxury afford nahi kar sakte, ab Shubhta laaya hai luxury perfume for your expensive body.</p>
-        <p class="price">₹999 <span class="mrp">₹1999</span></p>
-      </a>
-    </article>
-
-    <article class="product-card">
-      <a href="product-tv.html">
-        <img src="images/tv.jpg" alt="Smart TV" />
-        <h2>Samsung 43" Smart TV</h2>
-        <p class="tagline">Cinema ka maza, ghar par. Seal Pack condition.</p>
-        <p class="price">₹17,499 <span class="mrp">₹22,999</span></p>
-      </a>
-    </article>
-
-    <article class="product-card">
-      <a href="product-shoes.html">
-        <img src="images/shoes.jpg" alt="Running Shoes" />
-        <h2>Nike Running Shoes</h2>
-        <p class="tagline">Warehouse deal | Slightly used | ₹5000 ki feeling ₹1499 mein.</p>
-        <p class="price">₹1,499 <span class="mrp">₹4,999</span></p>
-      </a>
-    </article>
+  <section class="category-section">
+    <div class="category">
+      <a href="perfume.html">Luxury Perfumes</a>
+    </div>
+    <div class="category">
+      <a href="#">Smart TVs</a>
+    </div>
+    <div class="category">
+      <a href="#">Bluetooth Speakers</a>
+    </div>
+    <div class="category">
+      <a href="#">Smartphones</a>
+    </div>
+    <div class="category">
+      <a href="#">Air Conditioners</a>
+    </div>
+    <div class="category">
+      <a href="#">Luxury Bags</a>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 theShubhCart. All rights reserved.</p>
-    <p><a href="#" id="returnPolicyLink">Return Policy</a> | <a href="#" id="couponLink">Apply Coupon</a></p>
+    &copy; 2025 ShubhCart | Designed for Royals Like You 👑
   </footer>
-
-  <!-- MODALS -->
-  <div id="returnModal" class="modal hidden">
-    <div class="modal-content">
-      <span class="close" id="closeReturn">&times;</span>
-      <h2>Return Policy</h2>
-      <p>Products can be returned within 7 days if damaged, faulty or not as described. Warehouse stock items are sold "as-is" unless marked seal-packed.</p>
-    </div>
-  </div>
-
-  <div id="couponModal" class="modal hidden">
-    <div class="modal-content">
-      <span class="close" id="closeCoupon">&times;</span>
-      <h2>Apply Coupon</h2>
-      <p>Use <code>SHUBH50</code> to get ₹50 off your first order!</p>
-    </div>
-  </div>
-
-</body>
-</html>
-<!-- theshubhcart.com | Full E-commerce HTML Template Starting Point -->
-<!-- ✅ STEP 1: HOME PAGE SKELETON WITH PRODUCT LISTINGS & CATEGORY LINKS -->
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ShubhCart - Shubh kam ki shuruaat</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-</head>
-
-<body>
-  <header class="header">
-    <div class="logo">theShubhCart</div>
-    <nav class="navbar">
-      <input type="text" id="searchBar" placeholder="Search for products..." />
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="category-tv.html">TVs</a></li>
-        <li><a href="category-shoes.html">Shoes</a></li>
-        <li><a href="cart.html">Cart</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h1>Shubh kam ki shuruaat <span class="highlight">theShubhCart</span> ke sath</h1>
-    <p>Warehouse deals | Best prices | Mint & Scratch-checked products</p>
-  </section>
-
-  <section class="product-grid">
-    <article class="product-card">
-      <a href="product-perfume.html">
-        <img src="images/perfume.jpg" alt="Luxury Perfume" />
-        <h2>Luxury Perfume</h2>
-        <p class="tagline">Ab jo log kehte the aap luxury afford nahi kar sakte, ab Shubhta laaya hai luxury perfume for your expensive body.</p>
-        <p class="price">₹999 <span class="mrp">₹1999</span></p>
-      </a>
-    </article>
-
-    <article class="product-card">
-      <a href="product-tv.html">
-        <img src="images/tv.jpg" alt="Smart TV" />
-        <h2>Samsung 43" Smart TV</h2>
-        <p class="tagline">Cinema ka maza, ghar par. Seal Pack condition.</p>
-        <p class="price">₹17,499 <span class="mrp">₹22,999</span></p>
-      </a>
-    </article>
-
-    <article class="product-card">
-      <a href="product-shoes.html">
-        <img src="images/shoes.jpg" alt="Running Shoes" />
-        <h2>Nike Running Shoes</h2>
-        <p class="tagline">Warehouse deal | Slightly used | ₹5000 ki feeling ₹1499 mein.</p>
-        <p class="price">₹1,499 <span class="mrp">₹4,999</span></p>
-      </a>
-    </article>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 theShubhCart. All rights reserved.</p>
-    <p><a href="#" id="returnPolicyLink">Return Policy</a> | <a href="#" id="couponLink">Apply Coupon</a></p>
-  </footer>
-
-  <!-- MODALS -->
-  <div id="returnModal" class="modal hidden">
-    <div class="modal-content">
-      <span class="close" id="closeReturn">&times;</span>
-      <h2>Return Policy</h2>
-      <p>Products can be returned within 7 days if damaged, faulty or not as described. Warehouse stock items are sold "as-is" unless marked seal-packed.</p>
-    </div>
-  </div>
-
-  <div id="couponModal" class="modal hidden">
-    <div class="modal-content">
-      <span class="close" id="closeCoupon">&times;</span>
-      <h2>Apply Coupon</h2>
-      <p>Use <code>SHUBH50</code> to get ₹50 off your first order!</p>
-    </div>
-  </div>
 
 </body>
 </html>
