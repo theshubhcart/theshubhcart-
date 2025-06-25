@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Perfume Brands - ShubhCart</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
+      background: linear-gradient(to right, #f0f0f0, #e6e6e6); /* Soft premium gray background */
     }
 
     header {
-      background: linear-gradient(to right, #1d1d1d, #3d3d3d);
+      background: linear-gradient(to right, #000000, #434343);
       color: white;
       padding: 20px;
       text-align: center;
@@ -21,6 +21,7 @@
     h1 {
       margin: 0;
       font-size: 32px;
+      letter-spacing: 1px;
     }
 
     .brand-container {
@@ -34,81 +35,99 @@
     .brand-card {
       width: 200px;
       height: 220px;
-      background: white;
+      background: #fff;
       border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       text-decoration: none;
       color: black;
-      transition: all 0.3s ease;
       position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease;
     }
 
     .brand-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
     }
 
-    .brand-card img {
-      width: 100px;
-      height: 100px;
+    .brand-card::before {
+      content: "";
+      background-size: 60%;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.05;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Brand-specific background logos */
+    .gucci::before {
+      background-image: url('https://1000logos.net/wp-content/uploads/2017/05/Gucci-logo.png');
+    }
+
+    .armani::before {
+      background-image: url('https://1000logos.net/wp-content/uploads/2017/05/Armani-logo.png');
+    }
+
+    .boss::before {
+      background-image: url('https://1000logos.net/wp-content/uploads/2017/05/Hugo-Boss-logo.png');
+    }
+
+    .zara::before {
+      background-image: url('https://1000logos.net/wp-content/uploads/2017/05/Zara-logo.png');
+    }
+
+    .chanel::before {
+      background-image: url('https://1000logos.net/wp-content/uploads/2017/05/Chanel-logo.png');
+    }
+
+    .brand-logo {
+      width: 80px;
+      height: 80px;
       object-fit: contain;
-      margin-top: 20px;
+      margin: 30px auto 10px;
+      display: block;
+      z-index: 1;
+      position: relative;
     }
 
     .brand-name {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: bold;
+      text-align: center;
       margin-bottom: 20px;
+      z-index: 1;
+      position: relative;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background: #222;
+      background: #1a1a1a;
       color: #ccc;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Choose Your Perfume Brand</h1>
-</header>
+  <header>
+    <h1>Choose Your Perfume Brand</h1>
+  </header>
 
-<div class="brand-container">
-  <a href="gucci.html" class="brand-card">
-    <img src="https://1000logos.net/wp-content/uploads/2017/05/Gucci-logo.png" alt="Gucci">
-    <div class="brand-name">Gucci</div>
-  </a>
+  <div class="brand-container">
 
-  <a href="armani.html" class="brand-card">
-    <img src="https://1000logos.net/wp-content/uploads/2017/05/Armani-logo.png" alt="Armani">
-    <div class="brand-name">Armani</div>
-  </a>
+    <a href="gucci.html" class="brand-card gucci">
+      <img src="https://1000logos.net/wp-content/uploads/2017/05/Gucci-logo.png" alt="Gucci" class="brand-logo">
+      <div class="brand-name">Gucci</div>
+    </a>
 
-  <a href="boss.html" class="brand-card">
-    <img src="https://1000logos.net/wp-content/uploads/2017/05/Hugo-Boss-logo.png" alt="Boss">
-    <div class="brand-name">Boss</div>
-  </a>
+    <a href="armani.html" class="brand-card armani">
+      <img src="https://1000logos.net/wp-content/uploads/2017/05/Armani-logo.png" alt="Armani" class="brand-logo">
+      <div class="brand-name">Armani</div>
+    </a>
 
-  <a href="zara.html" class="brand-card">
-    <img src="https://1000logos.net/wp-content/uploads/2017/05/Zara-logo.png" alt="Zara">
-    <div class="brand-name">Zara</div>
-  </a>
-
-  <a href="chanel.html" class="brand-card">
-    <img src="https://1000logos.net/wp-content/uploads/2017/05/Chanel-logo.png" alt="Chanel">
-    <div class="brand-name">Chanel</div>
-  </a>
-</div>
-
-<footer>
-  &copy; 2025 ShubhCart - All rights reserved.
-</footer>
-
-</body>
-</html>
+    <a href="boss.html" class="brand-card boss">
+      <img src="
