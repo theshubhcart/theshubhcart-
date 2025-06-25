@@ -1,122 +1,126 @@
-<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TheShubhCart - Luxury Shopping Redefined</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>theshubhcart - Shubh Shopping Ki Shuruaat</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #1e1e1e, #2c3e50);
+            color: white;
+        }header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: #000000cc;
+        position: sticky;
+        top: 0;
+        z-index: 10;
     }
-    body {
-      background: linear-gradient(145deg, #1f1f1f, #2a2a2a);
-      color: #fff;
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: gold;
     }
-    header {
-      background-color: #000;
-      color: #FFD700;
-      padding: 15px 30px;
-      font-size: 24px;
-      font-weight: bold;
-      text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.7);
-    }
+
     .search-bar {
-      margin: 20px auto;
-      display: flex;
-      justify-content: center;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        border: none;
+        width: 200px;
     }
-    .search-bar input {
-      width: 80%;
-      padding: 12px 20px;
-      border-radius: 25px;
-      border: none;
-      font-size: 16px;
+
+    .tagline {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        color: #f1c40f;
     }
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      padding: 20px;
+
+    .product-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        padding: 2rem;
     }
+
     .card {
-      background-color: #2b2b2b;
-      border-radius: 20px;
-      width: 45%;
-      margin: 15px;
-      padding: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-      transition: transform 0.3s;
+        background-color: #ffffff11;
+        border-radius: 15px;
+        padding: 1rem;
+        text-align: center;
+        transition: transform 0.3s;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     }
+
     .card:hover {
-      transform: scale(1.03);
+        transform: translateY(-5px);
     }
+
     .card img {
-      width: 100%;
-      border-radius: 15px;
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
     }
-    .card h3 {
-      margin-top: 10px;
-      color: #FFD700;
-      font-size: 22px;
+
+    .category {
+        font-size: 1.4rem;
+        margin: 0.5rem 0;
+        font-weight: 600;
+        color: gold;
     }
-    .card p {
-      font-size: 14px;
-      margin-top: 5px;
-      color: #ccc;
+
+    .product-tagline {
+        font-size: 0.95rem;
+        color: #ddd;
     }
-    footer {
-      margin-top: 30px;
-      text-align: center;
-      font-size: 14px;
-      padding: 10px;
-      color: #999;
-    }
-  </style>
-</head>
-<body>
-  <header>TheShubhCart - Feel the Luxury</header>  <div class="search-bar">
-    <input type="text" placeholder="Search for products, categories or brands...">
-  </div>  <div class="container">
+</style>
+
+</head><body>
+    <header>
+        <div class="logo">theshubhcart</div>
+        <input class="search-bar" type="text" placeholder="Search products...">
+    </header><div class="tagline">Shubh shopping ki shuruaat, theshubhcart ke sath</div>
+
+<section class="product-section">
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1598514982896-3ec9b181cdd3" alt="Luxury Perfume">
-      <h3>Luxury Perfume</h3>
-      <p>Ab jo log kehte the aap luxury afford nahi kar sakte, ab Shubhta laya hai luxury perfume for your expensive body.</p>
-    </div><div class="card">
-  <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04" alt="Smart TV">
-  <h3>Smart TV</h3>
-  <p>Bade TV ka sukh, ab har ghar mein – premium quality smart TVs at jaw-dropping prices!</p>
-</div>
+        <img src="https://images.unsplash.com/photo-1598032893363-9b77b131d91a" alt="Perfume">
+        <div class="category">Luxury Perfumes</div>
+        <div class="product-tagline">Khushboo jo yaadon mein reh jaaye, classy bhi aur sassy bhi.</div>
+    </div>
 
-<div class="card">
-  <img src="https://images.unsplash.com/photo-1567016549631-57e54c0e7521" alt="Speakers">
-  <h3>Speakers</h3>
-  <p>Bring sound to life – thump, bass aur clarity with every beat. Shop now!</p>
-</div>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1606811842376-7d5746b117b7" alt="Smart TVs">
+        <div class="category">Smart TVs</div>
+        <div class="product-tagline">Dekhiye duniya ko naye rangon mein — picture perfect clarity ke sath.</div>
+    </div>
 
-<div class="card">
-  <img src="https://images.unsplash.com/photo-1606813908653-990dafe65f2d" alt="Luxury Bags">
-  <h3>Luxury Bags</h3>
-  <p>Style, class aur premium feel – now carry your pride on your shoulder.</p>
-</div>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1616627987934-58a5b4cdcc85" alt="Shoes">
+        <div class="category">Shoes</div>
+        <div class="product-tagline">Har kadam style se uthao, comfort aur fashion ka combo.</div>
+    </div>
 
-<div class="card">
-  <img src="https://images.unsplash.com/photo-1592878895903-c5da577f83f5" alt="Shoes">
-  <h3>Shoes</h3>
-  <p>Har kadam mein confidence – trending luxury footwear collection on TheShubhCart.</p>
-</div>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1567016549633-d4b3ca1b1b79" alt="Headphones">
+        <div class="category">Headphones</div>
+        <div class="product-tagline">Suno dil ki awaaz bhi bina shor ke, pure bass mein.</div>
+    </div>
 
-<div class="card">
-  <img src="https://images.unsplash.com/photo-1582545298912-35d5d3f13e7b" alt="Fridges">
-  <h3>Smart Fridges</h3>
-  <p>Cooling redefined – luxury refrigerators at unimaginable deals. Order now!</p>
-</div>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1602526216076-3b39a3a3a05b" alt="Air Conditioners">
+        <div class="category">Air Conditioners</div>
+        <div class="product-tagline">Thandak jo sirf body nahi, mood bhi cool kar de.</div>
+    </div>
 
-  </div>  <footer>
-    Easy Returns | Cash on Delivery | Premium Support<br>
-    &copy; 2025 TheShubhCart. All rights reserved.
-  </footer>
-</body>
-</html>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a" alt="Watches">
+        <div class="category">Luxury Watches</div>
+        <div class="product-tagline">Waqt bhi bole – kya class hai!</div>
+    </div>
+</section>
+
+</body></html>
