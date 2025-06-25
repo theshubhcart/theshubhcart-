@@ -2,206 +2,191 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ShubhCart - Feel Like a King</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheShubhCart - Shubh Kaam Ki Shuruaat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      background: #f7f9fc;
-      color: #111;
-    }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f9f9f9;
+            color: #333;
+        }
 
-    header {
-      background: linear-gradient(90deg, #050505, #1e1e1e);
-      color: #fff;
-      padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+        header {
+            background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+            padding: 1rem;
+            text-align: center;
+            color: #fff;
+        }
 
-    header h1 {
-      font-size: 1.6rem;
-      color: gold;
-    }
+        header h1 {
+            font-size: 1.8rem;
+        }
 
-    .search-bar {
-      display: flex;
-      gap: 0.5rem;
-    }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #222;
+            padding: 0.5rem;
+        }
 
-    .search-bar input {
-      padding: 0.5rem;
-      border-radius: 5px;
-      border: none;
-    }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 600;
+            transition: 0.3s;
+        }
 
-    .search-bar button {
-      padding: 0.5rem 1rem;
-      background: gold;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+        nav a:hover {
+            color: #ffcc00;
+        }
 
-    .hero {
-      padding: 2rem;
-      text-align: center;
-      background: url('https://i.imgur.com/U0VmVZx.jpg') no-repeat center center/cover;
-      color: white;
-    }
+        .hero {
+            background: url('https://dummyimage.com/1080x300/333/fff&text=Shubh+Deals+Everyday!') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            font-size: 2rem;
+            font-weight: bold;
+        }
 
-    .hero h2 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      text-shadow: 1px 1px 5px #000;
-    }
+        .section-title {
+            text-align: center;
+            margin: 2rem 0 1rem;
+            font-size: 1.5rem;
+            color: #333;
+        }
 
-    .categories, .products {
-      padding: 2rem;
-    }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            padding: 1rem 2rem;
+        }
 
-    .section-title {
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-      color: #222;
-    }
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
 
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-    }
+        .product-card:hover {
+            transform: scale(1.03);
+        }
 
-    .product-card {
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      transition: transform 0.2s;
-      cursor: pointer;
-    }
+        .product-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
 
-    .product-card:hover {
-      transform: translateY(-5px);
-    }
+        .product-details {
+            padding: 1rem;
+        }
 
-    .product-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
+        .product-details h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
 
-    .product-info {
-      padding: 1rem;
-    }
+        .product-details p {
+            font-size: 0.9rem;
+            color: #666;
+        }
 
-    .product-info h3 {
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-    }
+        .price {
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: green;
+        }
 
-    .price {
-      color: green;
-      font-weight: bold;
-    }
+        .mrp {
+            text-decoration: line-through;
+            color: #999;
+            margin-left: 0.5rem;
+        }
 
-    .mrp {
-      text-decoration: line-through;
-      color: #999;
-      margin-left: 0.5rem;
-      font-size: 0.9rem;
-    }
+        .condition {
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+            color: #cc0000;
+        }
 
-    .cod-icon {
-      display: inline-block;
-      background: #4caf50;
-      color: white;
-      font-size: 0.75rem;
-      padding: 2px 6px;
-      border-radius: 8px;
-      margin-left: 0.5rem;
-    }
-
-    footer {
-      padding: 2rem;
-      text-align: center;
-      background: #222;
-      color: #bbb;
-      margin-top: 3rem;
-    }
-
-    @media (max-width: 768px) {
-      .hero h2 {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 
 <body>
-  <header>
-    <h1>ShubhCart</h1>
-    <div class="search-bar">
-      <input type="text" id="searchInput" placeholder="Search for TVs, Shoes, Bags...">
-      <button onclick="searchProduct()">Search</button>
+    <header>
+        <h1>Shubh Kaam Ki Shuruaat TheShubhCart Ke Saath</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Perfumes</a>
+        <a href="#">Mobiles</a>
+        <a href="#">Electronics</a>
+        <a href="#">ACs</a>
+        <a href="#">Shoes</a>
+        <a href="#">Login</a>
+        <a href="#">Cart</a>
+    </nav>
+
+    <div class="hero">
+        Shubh Offers, Roz Naye!
     </div>
-  </header>
 
-  <section class="hero">
-    <h2>Ab jo log aapse kehte the aap luxury afford nahi kar sakte,<br> ab Shubhta aapke liye laya hai luxury perfume for your expensive body</h2>
-  </section>
+    <div class="section-title">Featured Products</div>
 
-  <section class="products">
-    <h2 class="section-title">Trending Products</h2>
-    <div class="product-grid" id="productGrid">
-      <div class="product-card" onclick="location.href='product_tv.html'">
-        <img src="https://i.imgur.com/fTVRzIb.jpg" alt="4K Smart TV">
-        <div class="product-info">
-          <h3>Panasonic 4K Smart TV</h3>
-          <div class="price">₹28,999 <span class="mrp">₹44,990</span><span class="cod-icon">COD</span></div>
+    <div class="products">
+        <div class="product-card">
+            <img class="product-image" src="https://dummyimage.com/300x180/000/fff&text=Luxury+Perfume" alt="Luxury Perfume">
+            <div class="product-details">
+                <h3>Luxury Perfume</h3>
+                <p>Ab jo log aapse kehte the aap luxury afford nahi kar sakte, ab TheShubhCart aapke liye laya hai luxury perfume for your expensive body.</p>
+                <div class="price">
+                    ₹999 <span class="mrp">₹1499</span>
+                </div>
+                <div class="condition">Condition: Seal Pack</div>
+            </div>
         </div>
-      </div>
-      <div class="product-card" onclick="location.href='product_shoe.html'">
-        <img src="https://i.imgur.com/ZpdcX4r.jpg" alt="Nike Air Jordan">
-        <div class="product-info">
-          <h3>Nike Air Jordan</h3>
-          <div class="price">₹7,999 <span class="mrp">₹13,499</span><span class="cod-icon">COD</span></div>
+
+        <div class="product-card">
+            <img class="product-image" src="https://dummyimage.com/300x180/111/eee&text=Warehouse+AC" alt="Used AC">
+            <div class="product-details">
+                <h3>Haier 1.5 Ton AC</h3>
+                <p>Warehouse fresh stock with light touchable scratches. Energy efficient and instant cooling.</p>
+                <div class="price">
+                    ₹23,499 <span class="mrp">₹34,999</span>
+                </div>
+                <div class="condition">Condition: Minor Scratches</div>
+            </div>
         </div>
-      </div>
-      <div class="product-card" onclick="location.href='product_bag.html'">
-        <img src="https://i.imgur.com/dLYdflo.jpg" alt="Luxury Handbag">
-        <div class="product-info">
-          <h3>Bellman Paris Bag</h3>
-          <div class="price">₹5,999 <span class="mrp">₹10,000</span><span class="cod-icon">COD</span></div>
-        </div>
-      </div>
     </div>
-  </section>
 
-  <footer>
-    <p>&copy; 2025 ShubhCart. All rights reserved. Designed with passion.</p>
-  </footer>
-
-  <script>
-    function searchProduct() {
-      const input = document.getElementById('searchInput').value.toLowerCase();
-      const products = document.querySelectorAll('.product-card');
-      products.forEach(card => {
-        const name = card.innerText.toLowerCase();
-        card.style.display = name.includes(input) ? 'block' : 'none';
-      });
-    }
-  </script>
+    <footer>
+        &copy; 2025 TheShubhCart. All rights reserved.
+    </footer>
 </body>
 
-  </html>
-  
+</html>
