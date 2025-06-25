@@ -1,78 +1,139 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Perfume Brands - ShubhCart</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Luxury Perfumes - ShubhCart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Poppins&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fdf6f0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Original Premium */
     }
-    h1 {
+
+    header {
+      background: #0b0c10;
+      color: #ffffff;
+      padding: 30px 20px;
       text-align: center;
-      font-size: 2.5em;
-      margin: 20px 0;
-      color: #333;
+      font-size: 32px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
+
     .brand-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
-      padding: 20px;
+      padding: 50px 20px;
+      gap: 40px;
     }
+
     .brand-card {
-      width: 200px;
-      height: 240px;
-      background-color: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      text-align: center;
-      padding: 20px 10px;
-      transition: transform 0.2s ease;
-      cursor: pointer;
+      width: 220px;
+      height: 250px;
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
       text-decoration: none;
-      color: inherit;
+      color: #333;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      position: relative;
+      padding-top: 30px;
     }
+
     .brand-card:hover {
-      transform: scale(1.05);
+      transform: translateY(-8px);
+      box-shadow: 0 18px 35px rgba(0, 0, 0, 0.25);
     }
-    .brand-card img {
+
+    .brand-logo {
       width: 100px;
       height: 100px;
       object-fit: contain;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
+      margin-top: 10px;
     }
+
     .brand-name {
-      font-size: 1.1em;
+      font-size: 20px;
       font-weight: bold;
-      color: #222;
+      color: #1f1f1f;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 0.5px;
+    }
+
+    .brand-title {
+      position: absolute;
+      top: 10px;
+      font-family: 'Cinzel', serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: #333333;
+      opacity: 0.8;
+      text-align: center;
+      width: 100%;
+      letter-spacing: 1.5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0b0c10;
+      color: #aaa;
     }
   </style>
 </head>
-<body><h1>Explore Premium Perfume Brands</h1>
-<div class="brand-container">
-  <a href="gucci.html" class="brand-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Gucci_Logo.svg" alt="Gucci">
-    <div class="brand-name">Gucci</div>
-  </a>
-  <a href="chanel.html" class="brand-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Chanel_logo_interlocking_cs.svg" alt="Chanel">
-    <div class="brand-name">Chanel</div>
-  </a>
-  <a href="boss.html" class="brand-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Hugo-Boss-Logo.svg" alt="Hugo Boss">
-    <div class="brand-name">Boss</div>
-  </a>
-  <a href="zara.html" class="brand-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="Zara">
-    <div class="brand-name">Zara</div>
-  </a>
-  <a href="burberry.html" class="brand-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Burberry_Logo_01.svg" alt="Burberry">
-    <div class="brand-name">Burberry</div>
-  </a>
-</div></body>
+<body>
+
+  <header>
+    Choose Your Luxury Perfume Brand
+  </header>
+
+  <div class="brand-container">
+
+    <a href="gucci.html" class="brand-card">
+      <div class="brand-title">GUCCI</div>
+      <img src="https://1000logos.net/wp-content/uploads/2017/05/Gucci-logo.png" alt="Gucci" class="brand-logo">
+      <div class="brand-name">Gucci</div>
+    </a>
+
+    <a href="armani.html" class="brand-card">
+      <div class="brand-title">ARMANI</div>
+      <img src="https://1000logos.net/wp-content/uploads/2017/05/Armani-logo.png" alt="Armani" class="brand-logo">
+      <div class="brand-name">Armani</div>
+    </a>
+
+    <a href="boss.html" class="brand-card">
+      <div class="brand-title">BOSS</div>
+      <img src="https://1000logos.net/wp-content/uploads/2017/05/Hugo-Boss-logo.png" alt="Boss" class="brand-logo">
+      <div class="brand-name">Boss</div>
+    </a>
+
+    <a href="zara.html" class="brand-card">
+      <div class="brand-title">ZARA</div>
+      <img src="https://1000logos.net/wp-content/uploads/2017/05/Zara-logo.png" alt="Zara" class="brand-logo">
+      <div class="brand-name">Zara</div>
+    </a>
+
+    <a href="chanel.html" class="brand-card">
+      <div class="brand-title">CHANEL</div>
+      <img src="https://1000logos.net/wp-content/uploads/2017/05/Chanel-logo.png" alt="Chanel" class="brand-logo">
+      <div class="brand-name">Chanel</div>
+    </a>
+
+  </div>
+
+  <footer>
+    &copy; 2025 ShubhCart - All rights reserved.
+  </footer>
+
+</body>
 </html>
