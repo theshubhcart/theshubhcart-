@@ -1,122 +1,144 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Profile - ShubhCart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>theShubhCart | Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f5f5f5;
-    }
-    header {
-      background-color: #212121;
-      color: white;
-      padding: 15px 25px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    header h1 {
-      font-size: 22px;
-    }
-    .container {
-      max-width: 800px;
-      margin: 30px auto;
-      background-color: #fff;
-      border-radius: 10px;
-      padding: 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .profile-pic {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #007bff;
-    }
-    .profile-header {
-      text-align: center;
-    }
-    .profile-header h2 {
-      margin: 15px 0 5px;
-    }
-    .profile-header p {
-      color: gray;
-    }
-    .profile-info {
-      margin-top: 30px;
-    }
-    .profile-info label {
-      font-weight: bold;
-      display: block;
-      margin-top: 15px;
-    }
-    .profile-info p {
-      margin: 5px 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f7fc;
       color: #333;
-    }
-    .btn-group {
-      margin-top: 30px;
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-    }
-    .btn {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 30px;
-      cursor: pointer;
-      margin: 10px;
-      font-size: 15px;
-      transition: 0.3s;
-    }
-    .btn:hover {
-      background-color: #0056b3;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: gray;
-      font-size: 14px;
-    }
+    }.header {
+  background-color: #212121;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header img {
+  height: 30px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #007BFF;
+}
+
+.name {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.email {
+  color: #666;
+  margin: 0.3rem 0;
+}
+
+.info {
+  text-align: left;
+  margin: 1.5rem 0;
+  font-size: 1rem;
+}
+
+.info b {
+  display: block;
+  margin-top: 1rem;
+  color: #007BFF;
+}
+
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn i {
+  margin-right: 0.5rem;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
   </style>
-</head>
-<body>
+</head><body>
+  <div class="header">
+    <span>theShubhCart Profile</span>
+    <img src="https://via.placeholder.com/100x30?text=Logo" alt="theShubhCart Logo">
+  </div>  <div class="container">
+    <img src="https://via.placeholder.com/100" class="profile-pic" alt="User Profile Picture" id="profileImage"><div class="name" id="userName">Your Name</div>
+<div class="email" id="userEmail">youremail@example.com</div>
 
-  <header>
-    <h1>ShubhCart Profile</h1>
-    <img src="logo.png" alt="Logo" height="40" style="pointer-events: none;">
-  </header>
+<div class="info">
+  <b>Phone Number:</b>
+  <span id="userPhone">+91-XXXXXXXXXX</span>
 
-  <div class="container">
-    <div class="profile-header">
-      <img src="https://via.placeholder.com/120" alt="Profile Picture" class="profile-pic" id="profileImage">
-      <h2 id="userName">Your Name</h2>
-      <p id="userEmail">youremail@example.com</p>
-    </div>
+  <b>Address:</b>
+  <span id="userAddress">Your saved address goes here...</span>
+</div>
 
-    <div class="profile-info">
-      <label>Phone Number:</label>
-      <p id="userPhone">+91-XXXXXXXXXX</p>
+<div class="btns">
+  <button class="btn"><i class="fas fa-box"></i> My Orders</button>
+  <button class="btn"><i class="fas fa-heart"></i> My Wishlist</button>
+  <button class="btn"><i class="fas fa-user-edit"></i> Edit Profile</button>
+</div>
 
-      <label>Address:</label>
-      <p id="userAddress">Your saved address goes here...</p>
-    </div>
+  </div>  <div class="footer">
+    &copy; 2025 theShubhCart. All rights reserved.
+  </div>  <script>
+    // Dummy Firebase-like example (replace later with actual Firebase)
+    const userData = {
+      name: "Shubh Kumar",
+      email: "shubh@example.com",
+      phone: "+91-9876543210",
+      address: "B-123, Model Town, Delhi, India",
+      profilePic: "https://randomuser.me/api/portraits/men/75.jpg"
+    };
 
-    <div class="btn-group">
-      <button class="btn" onclick="location.href='orders.html'">My Orders</button>
-      <button class="btn" onclick="location.href='wishlist.html'">My Wishlist</button>
-      <button class="btn" onclick="alert('Edit Profile Coming Soon')">Edit Profile</button>
-    </div>
-  </div>
-
-  <footer>
-    &copy; 2025 ShubhCart. All rights reserved.
-  </footer>
-
-</body>
-  </html>
+    // Update profile with user data
+    document.getElementById("userName").innerText = userData.name;
+    document.getElementById("userEmail").innerText = userData.email;
+    document.getElementById("userPhone").innerText = userData.phone;
+    document.getElementById("userAddress").innerText = userData.address;
+    document.getElementById("profileImage").src = userData.profilePic;
+  </script></body></html>
