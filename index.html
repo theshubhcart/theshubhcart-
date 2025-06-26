@@ -3,146 +3,154 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>theshubhcart</title>
+  <title>ShubhCart - Home</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background-color: #f1f9ff;
+      background: #f9f9f9;
+      color: #000;
     }
     header {
-      background: linear-gradient(to right, #007bff, #3399ff);
-      padding: 20px;
+      background: linear-gradient(to right, #007BFF, #00AEEF);
       color: white;
+      padding: 1rem;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
-    .logo-text {
-      font-size: 1.8em;
+    .logo {
+      font-size: 1.6rem;
       font-weight: bold;
+      pointer-events: none; /* not clickable */
     }
-    .header-icons {
+    .icons {
       display: flex;
-      gap: 15px;
+      gap: 1rem;
     }
-    .header-icons img {
-      width: 28px;
-      height: 28px;
+    .icon {
+      font-size: 1.5rem;
       cursor: pointer;
     }
-    .header-icons img.nonclickable {
-      pointer-events: none;
-      opacity: 0.9;
-    }
-    .search-container {
+    .search-bar {
+      margin: 1rem;
       text-align: center;
-      margin: 20px 0 10px;
     }
-    .search-container input {
-      width: 80%;
-      padding: 10px;
-      font-size: 1em;
-      border: 2px solid #ddd;
-      border-radius: 30px;
+    .search-bar input {
+      width: 90%;
+      padding: 0.6rem;
+      border-radius: 25px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
     }
     .tagline {
       text-align: center;
-      font-size: 1.1em;
-      margin-bottom: 10px;
+      font-size: 1.2rem;
       color: #333;
+      margin-bottom: 1rem;
     }
-    .tagline strong {
-      font-weight: bold;
-    }
-    .product-grid {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 20px;
-      padding: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
     }
-    .product-card {
+    .card {
       background: white;
-      padding: 15px;
-      border-radius: 15px;
+      border-radius: 16px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
       text-align: center;
-      transition: 0.3s;
+      transition: transform 0.2s;
+      text-decoration: none;
+      color: inherit;
     }
-    .product-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    .card:hover {
+      transform: scale(1.03);
     }
-    .product-card img {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 10px;
-    }
-    .product-card h3 {
-      margin: 10px 0 5px;
-      font-size: 1.1em;
-    }
-    .product-card p {
-      font-size: 0.9em;
-      color: #555;
+    .card img {
+      width: 50px;
+      height: 50px;
     }
     footer {
-      background: #eee;
       text-align: center;
-      padding: 10px;
-      font-size: 0.9em;
-      color: #333;
+      padding: 1rem;
+      background: #eee;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo-text">theshubhcart</div>
-    <div class="header-icons">
-      <img src="https://cdn-icons-png.flaticon.com/128/3144/3144456.png" alt="Cart" class="nonclickable" />
-      <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/1077/1077063.png" alt="Profile" /></a>
-    </div>
-  </header>
 
-  <div class="search-container">
-    <input type="text" placeholder="Search for products..." />
+<header>
+  <div class="logo">theshubhcart</div>
+  <div class="icons">
+    <a href="profile.html" class="icon">👤</a>
+    <span class="icon">🛒</span>
   </div>
+</header>
 
-  <div class="tagline">Shubh shopping ki shuruaat, <strong>theshubhcart</strong> ke sath</div>
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Search for products...">
+</div>
 
-  <div class="product-grid">
-    <div class="product-card">
-      <img src="https://via.placeholder.com/60?text=TV" alt="TV" />
-      <h3>TV</h3>
-      <p>Picture quality that blows your mind. Upgrade now!</p>
-    </div>
-    <div class="product-card">
-      <img src="https://via.placeholder.com/60?text=Perfume" alt="Perfume" />
-      <h3>Luxury Perfume</h3>
-      <p>Smell rich. Feel richer. Your body deserves this.</p>
-    </div>
-    <div class="product-card">
-      <img src="https://via.placeholder.com/60?text=RO" alt="RO" />
-      <h3>RO Water Purifier</h3>
-      <p>Pani jo sirf saaf nahi, shudh bhi ho. Protect your health!</p>
-    </div>
-    <div class="product-card">
-      <img src="https://via.placeholder.com/60?text=Refrigerator" alt="Refrigerator" />
-      <h3>Refrigerator</h3>
-      <p>Store more. Chill more. Designed for Indian homes.</p>
-    </div>
-    <div class="product-card">
-      <img src="https://via.placeholder.com/60?text=Shoes" alt="Shoes" />
-      <h3>Shoes</h3>
-      <p>Style that runs with you. Comfortable. Reliable.</p>
-    </div>
-    <div class="product-card">
-      <img src="https://via.placeholder.com/60?text=Luxury+Chairs" alt="Luxury Chairs" />
-      <h3>Luxury Chairs</h3>
-      <p>Thakawat mita do. Sit royally with our best chairs.</p>
-    </div>
-  </div>
+<div class="tagline">
+  Shubh shopping ki shuruaat, <strong>theshubhcart</strong> ke sath
+</div>
 
-  <footer>© 2025 theshubhcart. Easy returns. Cash on Delivery. Real deals. 💙</footer>
+<div class="grid" id="productGrid">
+  <a href="tv.html" class="card" data-name="tv">
+    <img src="tv.png" alt="TV" />
+    <h3>TV</h3>
+    <p>Picture quality that blows your mind. Upgrade now!</p>
+  </a>
+  <a href="perfume.html" class="card" data-name="luxury perfume">
+    <img src="perfume.png" alt="Perfume" />
+    <h3>Luxury Perfume</h3>
+    <p>Smell rich. Feel richer. Your body deserves this.</p>
+  </a>
+  <a href="ro.html" class="card" data-name="ro water purifier">
+    <img src="ro.png" alt="RO" />
+    <h3>RO Water Purifier</h3>
+    <p>Pani jo sirf saaf nahi, shudh bhi ho. Protect your health!</p>
+  </a>
+  <a href="fridge.html" class="card" data-name="refrigerator">
+    <img src="fridge.png" alt="Fridge" />
+    <h3>Refrigerator</h3>
+    <p>Store more. Chill more. Designed for Indian homes.</p>
+  </a>
+  <a href="shoes.html" class="card" data-name="shoes">
+    <img src="shoes.png" alt="Shoes" />
+    <h3>Shoes</h3>
+    <p>Style that runs with you. Comfortable. Reliable.</p>
+  </a>
+  <a href="chairs.html" class="card" data-name="luxury chairs">
+    <img src="chair.png" alt="Chair" />
+    <h3>Luxury Chairs</h3>
+    <p>Thakawat mita do. Sit royally with our best chairs.</p>
+  </a>
+</div>
+
+<footer>
+  © 2025 theshubhcart. Easy returns. Cash on Delivery. Real deals. 💙
+</footer>
+
+<script>
+  const searchInput = document.getElementById("searchInput");
+  const cards = document.querySelectorAll(".card");
+
+  searchInput.addEventListener("input", function () {
+    const value = this.value.toLowerCase();
+    cards.forEach(card => {
+      const name = card.dataset.name.toLowerCase();
+      if (name.includes(value)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+</script>
+
 </body>
-                             </html>
+</html>
