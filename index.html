@@ -1,167 +1,200 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>theshubhcart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>theShubhCart - Shubh shopping ki shuruaat</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom right, #f6e6c2, #f4dcb8);
-    }
+    }body {
+  background: linear-gradient(to right, #f8f4e5, #f3ecd9);
+  color: #333;
+}
 
-    header {
-      background-color: #111;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 20px;
-    }
+header {
+  background: #212121;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-    header h1 {
-      font-size: 28px;
-      font-weight: bold;
-      margin: 0;
-    }
+header h1 {
+  font-size: 1.8rem;
+  color: gold;
+}
 
-    .search-bar {
-      background: white;
-      border-radius: 20px;
-      padding: 8px 15px;
-      display: flex;
-      align-items: center;
-    }
+nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
 
-    .search-bar input {
-      border: none;
-      outline: none;
-      font-size: 14px;
-    }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    .tagline {
-      text-align: center;
-      font-size: 20px;
-      color: #222;
-      margin: 15px 0;
-      font-weight: 500;
-    }
+.search-container {
+  display: flex;
+  margin: 1rem auto;
+  justify-content: center;
+}
 
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 30px;
-    }
+.search-container input {
+  padding: 0.6rem;
+  width: 60%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
 
-    .card {
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      width: 45%;
-      max-width: 350px;
-      transition: transform 0.3s ease;
-      cursor: pointer;
-      text-decoration: none;
-      color: black;
-    }
+.search-container button {
+  padding: 0.6rem 1rem;
+  border: none;
+  background-color: #212121;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 0.5rem;
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
+.tagline {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 1rem;
+  color: #444;
+  font-weight: bold;
+}
 
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
-    }
+.category-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
 
-    .card-content {
-      padding: 15px;
-    }
+.category-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
 
-    .card-title {
-      font-size: 18px;
-      font-weight: bold;
-    }
+.category-card:hover {
+  transform: translateY(-5px);
+}
 
-    .card-tagline {
-      font-size: 14px;
-      color: #444;
-      margin-top: 5px;
-    }
+.category-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
 
-    @media screen and (max-width: 768px) {
-      .card {
-        width: 90%;
-      }
-    }
+.category-card .content {
+  padding: 1rem;
+}
+
+.category-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #212121;
+}
+
+.category-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+footer {
+  background: #212121;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
   </style>
-</head>
-<body>
-
+</head><body>
   <header>
-    <h1>theshubhcart</h1>
-    <div class="search-bar">
-      <input type="text" placeholder="Search here..." />
-    </div>
-  </header>
-
-  <div class="tagline">"Shubh shopping ki shuruaat, theshubhcart ke sath"</div>
-
-  <div class="container">
-    <a href="perfume.html" class="card">
-      <img src="https://images.unsplash.com/photo-1600180758890-6e1e6c57a3fa" alt="Perfumes" />
-      <div class="card-content">
-        <div class="card-title">Luxury Perfumes</div>
-        <div class="card-tagline">"Khushboo jo yaad ban jaaye..."</div>
+    <h1>theShubhCart 🛒</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#login">Login</a>
+      <a href="#cart">Cart</a>
+      <a href="#wishlist">Wishlist</a>
+      <a href="#profile">Profile</a>
+    </nav>
+  </header>  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search for products..." />
+    <button onclick="searchProducts()">Search</button>
+  </div>  <div class="tagline">
+    Shubh shopping ki shuruaat, <strong>theShubhCart</strong> ke sath 💫
+  </div>  <div class="category-section" id="productList">
+    <div class="category-card" onclick="location.href='perfume.html'">
+      <img src="https://i.imgur.com/W2lJz3O.jpg" alt="Luxury Perfume" />
+      <div class="content">
+        <h3>Luxury Perfume</h3>
+        <p>Luxury fragrance for your expensive body ✨</p>
       </div>
-    </a>
-
-    <a href="#" class="card">
-      <img src="https://images.unsplash.com/photo-1593784991483-a8ddc8c3442b" alt="Smart TVs" />
-      <div class="card-content">
-        <div class="card-title">Smart TVs</div>
-        <div class="card-tagline">"Cinema ghar par hi..."</div>
-      </div>
-    </a>
-
-    <a href="#" class="card">
-      <img src="https://images.unsplash.com/photo-1617816429472-0c5e9e7ed2ac" alt="Shoes" />
-      <div class="card-content">
-        <div class="card-title">Premium Shoes</div>
-        <div class="card-tagline">"Jahan jayein, nazar wahan thahri rahe..."</div>
-      </div>
-    </a>
-
-    <a href="#" class="card">
-      <img src="https://images.unsplash.com/photo-1618354691249-e9fdf9fbd43d" alt="Watches" />
-      <div class="card-content">
-        <div class="card-title">Luxury Watches</div>
-        <div class="card-tagline">"Samay ka style..."</div>
-      </div>
-    </a>
-
-    <a href="#" class="card">
-      <img src="https://images.unsplash.com/photo-1606813905260-c4233f529d46" alt="Speakers" />
-      <div class="card-content">
-        <div class="card-title">Speakers</div>
-        <div class="card-tagline">"Bass ka blast, har beat mein maza..."</div>
-      </div>
-    </a>
-
-    <a href="#" class="card">
-      <img src="https://images.unsplash.com/photo-1567016551642-9d85f3eb4c5e" alt="Kitchen Appliances" />
-      <div class="card-content">
-        <div class="card-title">Kitchen Appliances</div>
-        <div class="card-tagline">"Swad aur comfort ek sath..."</div>
-      </div>
-    </a>
+    </div><div class="category-card">
+  <img src="https://i.imgur.com/9sJbD1D.jpg" alt="Smart TV" />
+  <div class="content">
+    <h3>Smart TV</h3>
+    <p>Dekho, Jiyo aur Mehsoos karo real entertainment 🎬</p>
   </div>
+</div>
 
-</body>
-</html>
+<div class="category-card">
+  <img src="https://i.imgur.com/oFYUK0x.jpg" alt="RO" />
+  <div class="content">
+    <h3>RO Water Purifier</h3>
+    <p>Pure water, pure life — sirf aap ke liye 💧</p>
+  </div>
+</div>
+
+<div class="category-card">
+  <img src="https://i.imgur.com/lfzqsbX.jpg" alt="Refrigerator" />
+  <div class="content">
+    <h3>Refrigerator</h3>
+    <p>Thandak jo rahe sadiyon tak ❄️</p>
+  </div>
+</div>
+
+<div class="category-card">
+  <img src="https://i.imgur.com/LkJ1cYB.jpg" alt="Shoes" />
+  <div class="content">
+    <h3>Shoes</h3>
+    <p>Har kadam pe comfort aur swag 👟</p>
+  </div>
+</div>
+
+<div class="category-card">
+  <img src="https://i.imgur.com/6L3y9TL.jpg" alt="Luxury Chairs" />
+  <div class="content">
+    <h3>Luxury Chairs</h3>
+    <p>Royal feel, royal comfort 👑</p>
+  </div>
+</div>
+
+  </div>  <footer>
+    &copy; 2025 theShubhCart | Easy returns | Flash sales | Trust built with real photos & videos
+  </footer>  <script>
+    function searchProducts() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const cards = document.querySelectorAll(".category-card");
+      cards.forEach(card => {
+        const title = card.querySelector("h3").innerText.toLowerCase();
+        card.style.display = title.includes(query) ? "block" : "none";
+      });
+    }
+  </script></body></html>
