@@ -1,144 +1,154 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>theShubhCart | Profile</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Profile | ShubhCart</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #f4f7fc;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #f4f6fc;
       color: #333;
-    }.header {
-  background-color: #212121;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header img {
-  height: 30px;
-}
-
-.container {
-  max-width: 600px;
-  margin: 2rem auto;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  padding: 2rem;
-  text-align: center;
-}
-
-.profile-pic {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  border: 3px solid #007BFF;
-}
-
-.name {
-  font-size: 1.4rem;
-  font-weight: 600;
-}
-
-.email {
-  color: #666;
-  margin: 0.3rem 0;
-}
-
-.info {
-  text-align: left;
-  margin: 1.5rem 0;
-  font-size: 1rem;
-}
-
-.info b {
-  display: block;
-  margin-top: 1rem;
-  color: #007BFF;
-}
-
-.btns {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.btn {
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 0.6rem 1.2rem;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn i {
-  margin-right: 0.5rem;
-}
-
-.btn:hover {
-  background-color: #0056b3;
-}
-
-.footer {
-  text-align: center;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  color: #777;
-}
-
+      padding: 0 15px;
+    }
+    header {
+      background-color: #0e0e0e;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 15px;
+      border-bottom: 4px solid #4a90e2;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .icons i {
+      margin-left: 15px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    .profile-card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      margin-top: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+    .profile-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid #4a90e2;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    .name {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+    .email {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .info {
+      text-align: left;
+      margin: 20px 0;
+    }
+    .info p {
+      margin: 10px 0;
+    }
+    .info i {
+      color: #4a90e2;
+      margin-right: 10px;
+    }
+    .buttons button {
+      margin: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .orders { background: linear-gradient(to right, #007bff, #0056b3); }
+    .wishlist { background: linear-gradient(to right, #ff416c, #ff4b2b); }
+    .edit { background: linear-gradient(to right, #7b2ff7, #f107a3); }
+    .buttons button:hover {
+      opacity: 0.85;
+    }
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      margin: 30px 0 0;
+    }
+    .stat-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      padding: 15px;
+      flex: 1;
+      margin: 5px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+      text-align: center;
+    }
+    .stat-card i {
+      font-size: 1.5rem;
+      color: #4a90e2;
+    }
+    .stat-card h4 {
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #aaa;
+    }
   </style>
-</head><body>
-  <div class="header">
-    <span>theShubhCart Profile</span>
-    <img src="https://via.placeholder.com/100x30?text=Logo" alt="theShubhCart Logo">
-  </div>  <div class="container">
-    <img src="https://via.placeholder.com/100" class="profile-pic" alt="User Profile Picture" id="profileImage"><div class="name" id="userName">Your Name</div>
-<div class="email" id="userEmail">youremail@example.com</div>
-
-<div class="info">
-  <b>Phone Number:</b>
-  <span id="userPhone">+91-XXXXXXXXXX</span>
-
-  <b>Address:</b>
-  <span id="userAddress">Your saved address goes here...</span>
-</div>
-
-<div class="btns">
-  <button class="btn"><i class="fas fa-box"></i> My Orders</button>
-  <button class="btn"><i class="fas fa-heart"></i> My Wishlist</button>
-  <button class="btn"><i class="fas fa-user-edit"></i> Edit Profile</button>
-</div>
-
-  </div>  <div class="footer">
-    &copy; 2025 theShubhCart. All rights reserved.
-  </div>  <script>
-    // Dummy Firebase-like example (replace later with actual Firebase)
-    const userData = {
-      name: "Shubh Kumar",
-      email: "shubh@example.com",
-      phone: "+91-9876543210",
-      address: "B-123, Model Town, Delhi, India",
-      profilePic: "https://randomuser.me/api/portraits/men/75.jpg"
-    };
-
-    // Update profile with user data
-    document.getElementById("userName").innerText = userData.name;
-    document.getElementById("userEmail").innerText = userData.email;
-    document.getElementById("userPhone").innerText = userData.phone;
-    document.getElementById("userAddress").innerText = userData.address;
-    document.getElementById("profileImage").src = userData.profilePic;
-  </script></body></html>
+</head>
+<body>  <header>
+    <div class="logo">ShubhCart</div>
+    <div class="icons">
+      <i class="fas fa-bell"></i>
+      <i class="fas fa-cog"></i>
+    </div>
+  </header>  <section class="profile-card">
+    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile">
+    <div class="name">Shubh Kumar</div>
+    <div class="email">shubh@example.com</div>
+    <div class="info">
+      <p><i class="fas fa-phone"></i> +91-9876543210</p>
+      <p><i class="fas fa-map-marker-alt"></i> B-123, Model Town, Delhi, India</p>
+    </div>
+    <div class="buttons">
+      <button class="orders"><i class="fas fa-box"></i> My Orders</button>
+      <button class="wishlist"><i class="fas fa-heart"></i> My Wishlist</button>
+      <button class="edit"><i class="fas fa-edit"></i> Edit Profile</button>
+    </div>
+  </section>  <section class="stats">
+    <div class="stat-card">
+      <i class="fas fa-star"></i>
+      <h4>Prime Member</h4>
+    </div>
+    <div class="stat-card">
+      <i class="fas fa-tags"></i>
+      <h4>5 Coupons</h4>
+    </div>
+    <div class="stat-card">
+      <i class="fas fa-gift"></i>
+      <h4>2 Free Gifts</h4>
+    </div>
+  </section>  <footer>
+    © 2025 ShubhCart. Designed for legends like you.
+  </footer></body>
+</html>
