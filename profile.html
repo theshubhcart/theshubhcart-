@@ -88,6 +88,11 @@
       gap: 12px;
     }
 
+    .btn a {
+      text-decoration: none;
+      color: white;
+    }
+
     .btn {
       background: #007bff;
       color: white;
@@ -106,6 +111,57 @@
 
     .btn:hover {
       background: #0056c2;
+    }
+
+    /* Coupon card */
+    .coupon-card {
+      background: #fff3cd;
+      border-left: 5px solid #ffc107;
+      padding: 15px 20px;
+      border-radius: 12px;
+      margin-top: 25px;
+      text-align: left;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .coupon-card h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #444;
+    }
+
+    .coupon-item {
+      margin-bottom: 12px;
+    }
+
+    .coupon-code {
+      background: #fff;
+      padding: 8px 14px;
+      border-radius: 8px;
+      display: inline-block;
+      font-weight: bold;
+      color: #d35400;
+      font-size: 15px;
+      margin-right: 10px;
+    }
+
+    .coupon-expiry {
+      color: #888;
+      font-size: 13px;
+    }
+
+    .copy-btn {
+      background: #ffc107;
+      border: none;
+      padding: 5px 10px;
+      font-size: 13px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .copy-btn:hover {
+      background: #e0a800;
     }
 
     @media (max-width: 480px) {
@@ -135,11 +191,37 @@
     </div>
 
     <div class="btn-group">
-      <button class="btn"><i class="fas fa-box"></i> My Orders</button>
-      <button class="btn"><i class="fas fa-heart"></i> My Wishlist</button>
-      <button class="btn"><i class="fas fa-user-edit"></i> Edit Profile</button>
+      <button class="btn"><a href="orders.html"><i class="fas fa-box"></i> My Orders</a></button>
+      <button class="btn"><a href="wishlist.html"><i class="fas fa-heart"></i> My Wishlist</a></button>
+      <button class="btn"><a href="edit-profile.html"><i class="fas fa-user-edit"></i> Edit Profile</a></button>
+    </div>
+
+    <div class="coupon-card">
+      <h3>Available Coupons</h3>
+      <div class="coupon-item">
+        <span class="coupon-code">SHUBH100</span>
+        <button class="copy-btn" onclick="copyCode('SHUBH100')">Copy</button>
+        <div class="coupon-expiry">Get ₹100 OFF — Expires: 30 June 2025</div>
+      </div>
+      <div class="coupon-item">
+        <span class="coupon-code">FREESHIP</span>
+        <button class="copy-btn" onclick="copyCode('FREESHIP')">Copy</button>
+        <div class="coupon-expiry">Free Shipping — Expires: 15 July 2025</div>
+      </div>
+      <div class="coupon-item">
+        <span class="coupon-code">WELCOME50</span>
+        <button class="copy-btn" onclick="copyCode('WELCOME50')">Copy</button>
+        <div class="coupon-expiry">₹50 OFF for New Users — Expires: 10 July 2025</div>
+      </div>
     </div>
   </div>
+
+  <script>
+    function copyCode(code) {
+      navigator.clipboard.writeText(code);
+      alert("Coupon code '" + code + "' copied!");
+    }
+  </script>
 
 </body>
 </html>
