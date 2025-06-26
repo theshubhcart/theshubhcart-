@@ -1,145 +1,128 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Profile | ShubhCart</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Profile</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
     body {
-      background: #f4f6f9;
-      color: #333;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f3f4f6;
     }
-
     .header {
-      background: linear-gradient(to right, #004aad, #007bff);
-      padding: 40px 20px 100px;
-      border-bottom-left-radius: 50% 20%;
-      border-bottom-right-radius: 50% 20%;
+      background: linear-gradient(to right, #0047ab, #0f62fe);
+      color: white;
+      padding: 40px 20px 60px;
+      text-align: center;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
     }
-
-    .header h1 {
-      color: #fff;
-      font-size: 28px;
-      text-align: left;
-    }
-
     .profile-container {
-      background: #fff;
-      width: 90%;
-      max-width: 500px;
-      margin: -80px auto 30px;
-      padding: 25px 20px;
+      background-color: white;
+      max-width: 400px;
+      margin: -60px auto 20px;
       border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       text-align: center;
     }
-
-    .profile-img {
-      width: 110px;
-      height: 110px;
+    .profile-pic {
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
-      border: 4px solid #007bff;
+      background: #e0e0e0;
       margin: 0 auto 15px;
-      background: url('https://cdn-icons-png.flaticon.com/512/149/149071.png') center/cover no-repeat;
+      border: 4px solid #0f62fe;
     }
-
-    .profile-name {
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 5px;
+    .profile-container h2 {
+      margin: 10px 0 5px;
     }
-
-    .profile-email {
-      font-size: 15px;
-      color: #777;
-      margin-bottom: 15px;
+    .profile-container p {
+      margin: 4px 0;
+      color: #555;
     }
-
-    .profile-info {
-      margin-bottom: 10px;
-      font-size: 16px;
-    }
-
-    .stats-box {
-      background: #e8f1ff;
-      padding: 15px;
-      border-radius: 15px;
-      margin: 20px 0;
+    .info-box {
+      background-color: #e6f0ff;
+      padding: 10px;
+      border-radius: 10px;
+      margin: 15px 0;
       text-align: left;
     }
-
-    .stats-box p {
-      margin: 6px 0;
-      font-size: 15px;
+    .info-box span {
+      display: block;
+      margin: 5px 0;
+      font-size: 16px;
     }
-
-    .btn-group {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
+    .info-box span strong {
+      color: #000;
     }
-
     .btn {
-      background: #007bff;
+      display: block;
+      background-color: #0f62fe;
       color: white;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 12px;
       border: none;
-      padding: 12px 20px;
-      border-radius: 10px;
+      font-size: 16px;
       cursor: pointer;
-      font-size: 15px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.3s ease;
-      min-width: 140px;
-      justify-content: center;
+      transition: background-color 0.2s ease;
     }
-
     .btn:hover {
-      background: #0056c2;
+      background-color: #0047ab;
     }
-
-    @media (max-width: 480px) {
-      .btn {
-        font-size: 14px;
-        min-width: 100%;
-      }
+    .coupon-card {
+      background-color: #fff4e6;
+      border: 1px dashed #ff8800;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 10px;
+    }
+    .logout {
+      text-align: right;
+      padding: 10px 20px 0;
+    }
+    .logout button {
+      background-color: #ff4d4f;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .logout button:hover {
+      background-color: #d9363e;
     }
   </style>
 </head>
 <body>
-
   <div class="header">
     <h1>Your Profile</h1>
+  </div>  <div class="logout">
+    <button onclick="alert('Logged out successfully!')">Logout</button>
+  </div>  <div class="profile-container">
+    <div class="profile-pic"></div>
+    <h2>Shubh Kumar</h2>
+    <p>shubh@example.com</p>
+    <p>📞 +91-9876543210</p>
+    <p>🏠 B-123, Model Town, Delhi, India</p><div class="info-box">
+  <span>🏷️ Coupons: <strong>3</strong></span>
+  <span>💰 Loyalty Points: <strong>120</strong></span>
+</div>
+
+<button class="btn" onclick="alert('Opening Orders...')">📦 My Orders</button>
+<button class="btn" onclick="alert('Opening Wishlist...')">❤️ My Wishlist</button>
+<button class="btn" onclick="alert('Opening Profile Editor...')">🧑‍💻 Edit Profile</button>
+
+<div class="coupon-card">
+  <h3>🎁 Available Coupons</h3>
+  <ul>
+    <li><strong>FLAT50:</strong> Get ₹50 off on orders above ₹500</li>
+    <li><strong>FREESHIP:</strong> Free delivery on all orders today</li>
+    <li><strong>WELCOME100:</strong> ₹100 off for new users</li>
+  </ul>
+</div>
+
   </div>
-
-  <div class="profile-container">
-    <div class="profile-img"></div>
-    <div class="profile-name">Shubh Kumar</div>
-    <div class="profile-email">shubh@example.com</div>
-    <div class="profile-info">📞 +91-9876543210</div>
-    <div class="profile-info">🏠 B-123, Model Town, Delhi, India</div>
-
-    <div class="stats-box">
-      <p><i class="fas fa-tags"></i> Coupons: <strong>3</strong></p>
-      <p><i class="fas fa-coins"></i> Loyalty Points: <strong>120</strong></p>
-    </div>
-
-    <div class="btn-group">
-      <button class="btn"><i class="fas fa-box"></i> My Orders</button>
-      <button class="btn"><i class="fas fa-heart"></i> My Wishlist</button>
-      <button class="btn"><i class="fas fa-user-edit"></i> Edit Profile</button>
-    </div>
-  </div>
-
 </body>
 </html>
