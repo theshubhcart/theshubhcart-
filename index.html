@@ -1,151 +1,107 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>theshubhcart - Shubh shopping ki shuruaat</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Perfumes - theshubhcart</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
-    body { background-color: #fdfdfd; color: #111; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
     header {
-      background: linear-gradient(to right, #4a90e2, #007aff);
-      padding: 1rem;
+      background-color: #3f51b5;
       color: white;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    header h1 { font-size: 1.8rem; }
-    .cart-icon {
-      width: 28px;
-      height: 28px;
-      filter: invert(1);
-    }
-    .search-bar {
-      margin-top: 0.5rem;
-      display: flex;
-      justify-content: flex-end;
-      padding: 0 1rem;
-    }
-    .search-bar input {
-      padding: 0.5rem;
-      width: 250px;
-      border: 1px solid #ccc;
-      border-radius: 20px;
-    }
-    .tagline {
-      padding: 0.8rem 1rem;
-      font-size: 1rem;
-      color: #333;
-      font-weight: 500;
-      background-color: #eaf4ff;
+      padding: 1rem;
       text-align: center;
     }
-    .categories {
+    a.back-home {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      display: block;
+      margin-top: 5px;
+    }
+    .product-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
       justify-content: center;
-      padding: 1rem;
+      padding: 2rem;
+      gap: 2rem;
     }
-    .card {
+    .product-card {
       background: white;
-      width: 160px;
-      border-radius: 10px;
+      border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      overflow: hidden;
-      text-align: center;
-      transition: transform 0.2s;
-    }
-    .card:hover { transform: scale(1.04); cursor: pointer; }
-    .card img {
-      width: 100%;
-      height: 110px;
-      object-fit: cover;
-    }
-    .card h3 {
-      font-size: 1rem;
-      margin: 0.5rem 0;
-    }
-    .card p {
-      font-size: 0.85rem;
-      padding: 0 0.5rem 0.5rem;
-      color: #555;
-    }
-    footer {
-      text-align: center;
+      width: 280px;
       padding: 1rem;
-      background: #f0f0f0;
-      font-size: 0.9rem;
+      transition: 0.3s;
     }
-    @media screen and (max-width: 600px) {
-      .card { width: 45%; }
+    .product-card:hover {
+      transform: scale(1.02);
+    }
+    .product-card img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .product-card h2 {
+      font-size: 20px;
+      margin: 10px 0 5px;
+    }
+    .product-card p.description {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 8px;
+    }
+    .product-card p.price {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    .product-card button {
+      background-color: #ff6f00;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin-right: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .product-card button:hover {
+      background-color: #e65100;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>theshubhcart</h1>
-    <img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" alt="cart" class="cart-icon">
-  </header>
-  <div class="search-bar">
-    <input type="text" id="searchInput" placeholder="Search for products...">
-  </div>
-  <div class="tagline">Shubh shopping ki shuruaat, <strong>theshubhcart</strong> ke sath</div>
-  <section class="categories" id="categoryList">
-    <div class="card" data-title="tv">
-      <img src="https://images.samsung.com/is/image/samsung/assets/in/tvs/qled-tv/qn90c/QLED-TV_KV_QN90C_1440x640.jpg" alt="TV">
-      <h3>TV</h3>
-      <p>Picture quality that blows your mind. Upgrade now!</p>
-    </div>
-    <div class="card" data-title="perfume">
-      <img src="https://cdn.pixabay.com/photo/2017/09/01/00/45/perfume-2706100_960_720.jpg" alt="Perfume">
-      <h3>Luxury Perfume</h3>
-      <p>Smell rich. Feel richer. Your body deserves this.</p>
-    </div>
-    <div class="card" data-title="ro">
-      <img src="https://cdn.pixabay.com/photo/2020/05/11/10/28/water-filter-5155789_960_720.jpg" alt="RO">
-      <h3>RO Water Purifier</h3>
-      <p>Pani jo sirf saaf nahi, shudh bhi ho. Protect your health!</p>
-    </div>
-    <div class="card" data-title="refrigerator">
-      <img src="https://cdn.pixabay.com/photo/2015/04/08/13/13/fridge-712064_960_720.jpg" alt="Refrigerator">
-      <h3>Refrigerator</h3>
-      <p>Store more. Chill more. Designed for Indian homes.</p>
-    </div>
-    <div class="card" data-title="shoes">
-      <img src="https://cdn.pixabay.com/photo/2016/03/27/22/22/nike-1281664_960_720.jpg" alt="Shoes">
-      <h3>Shoes</h3>
-      <p>Style that runs with you. Comfortable. Reliable.</p>
-    </div>
-    <div class="card" data-title="luxury chairs">
-      <img src="https://cdn.pixabay.com/photo/2020/02/08/10/34/sofa-4829407_960_720.jpg" alt="Luxury Chairs">
-      <h3>Luxury Chairs</h3>
-      <p>Thakawat mita do. Sit royally with our best chairs.</p>
-    </div>
+    <h1>Luxury Perfumes Collection</h1>
+    <a href="index.html" class="back-home">← Back to Home</a>
+  </header>  <section class="product-grid">
+    <div class="product-card">
+      <img src="images/perfume1.jpg" alt="Royal Oud Perfume">
+      <h2>Royal Oud Perfume</h2>
+      <p class="description">Yeh sirf perfume nahi... ek personality hai jo logon ke dil mein bas jata hai.</p>
+      <p class="price">₹2,999 <del>₹4,999</del></p>
+      <button>Add to Cart</button>
+      <button>Buy Now</button>
+    </div><div class="product-card">
+  <img src="images/perfume2.jpg" alt="Aqua Fresh Mist">
+  <h2>Aqua Fresh Mist</h2>
+  <p class="description">Jo har pal ko tazgi se bhar de — light, fresh, and unforgettable.</p>
+  <p class="price">₹1,499 <del>₹2,499</del></p>
+  <button>Add to Cart</button>
+  <button>Buy Now</button>
+</div>
+
+<div class="product-card">
+  <img src="images/perfume3.jpg" alt="Floral Kiss EDP">
+  <h2>Floral Kiss EDP</h2>
+  <p class="description">Rose aur vanilla ka milan — aapki pehchaan banane ke liye tayyar.</p>
+  <p class="price">₹1,799 <del>₹3,299</del></p>
+  <button>Add to Cart</button>
+  <button>Buy Now</button>
+</div>
+
   </section>
-
-  <footer>
-    &copy; 2025 theshubhcart. Easy returns. Cash on Delivery. Real deals. 💙
-  </footer>
-
-  <script>
-    const searchInput = document.getElementById('searchInput');
-    const cards = document.querySelectorAll('.card');
-
-    searchInput.addEventListener('input', function () {
-      const searchValue = this.value.toLowerCase();
-      cards.forEach(card => {
-        const title = card.getAttribute('data-title');
-        if (title.includes(searchValue)) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  </script>
 </body>
-</html>
+    </html>
