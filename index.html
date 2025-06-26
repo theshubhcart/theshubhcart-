@@ -14,22 +14,22 @@
       background: linear-gradient(to right, #007bff, #3399ff);
       padding: 20px;
       color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .header-title {
-      font-size: 1.8em;
+      text-align: center;
+      font-size: 2em;
       font-weight: bold;
+      position: relative;
     }
-    .header-icons {
+    .icons-container {
+      position: absolute;
+      top: 20px;
+      right: 20px;
       display: flex;
       gap: 15px;
       align-items: center;
     }
-    .header-icons img {
-      width: 26px;
-      cursor: pointer;
+    .icons-container img {
+      width: 28px;
+      height: 28px;
     }
     .search-container {
       text-align: center;
@@ -63,8 +63,7 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       text-align: center;
       transition: 0.3s;
-      text-decoration: none;
-      color: black;
+      cursor: pointer;
     }
     .product-card:hover {
       transform: translateY(-5px);
@@ -90,26 +89,32 @@
       font-size: 0.9em;
       color: #333;
     }
+    a.profile-link {
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
+
   <header>
-    <div class="header-title">theshubhcart</div>
-    <div class="header-icons">
-      <!-- 🛒 Cart Icon -->
-      <img src="https://cdn-icons-png.flaticon.com/128/3081/3081986.png" alt="Cart" title="Your Cart">
-      <!-- 👤 Login Icon -->
-      <img src="https://cdn-icons-png.flaticon.com/128/456/456212.png" alt="Login/Profile" title="Login/Profile">
+    theshubhcart
+    <div class="icons-container">
+      <div title="Your Cart">
+        <img src="https://cdn-icons-png.flaticon.com/128/891/891462.png" alt="Cart" />
+      </div>
+      <a href="profile.html" title="Your Profile" class="profile-link">
+        <img src="https://cdn-icons-png.flaticon.com/128/1144/1144760.png" alt="Profile" />
+      </a>
     </div>
   </header>
 
   <div class="search-container">
-    <input type="text" id="searchInput" placeholder="Search for products..." onkeyup="filterProducts()" />
+    <input type="text" placeholder="Search for products..." />
   </div>
 
   <div class="tagline">Shubh shopping ki shuruaat, <strong>theshubhcart</strong> ke sath</div>
 
-  <div class="product-grid" id="productGrid">
+  <div class="product-grid">
     <a class="product-card" href="tv.html">
       <img src="https://via.placeholder.com/60?text=TV" alt="TV" />
       <h3>TV</h3>
@@ -125,8 +130,8 @@
       <h3>RO Water Purifier</h3>
       <p>Pani jo sirf saaf nahi, shudh bhi ho. Protect your health!</p>
     </a>
-    <a class="product-card" href="fridge.html">
-      <img src="https://via.placeholder.com/60?text=Fridge" alt="Refrigerator" />
+    <a class="product-card" href="refrigerator.html">
+      <img src="https://via.placeholder.com/60?text=Refrigerator" alt="Refrigerator" />
       <h3>Refrigerator</h3>
       <p>Store more. Chill more. Designed for Indian homes.</p>
     </a>
@@ -136,7 +141,7 @@
       <p>Style that runs with you. Comfortable. Reliable.</p>
     </a>
     <a class="product-card" href="chair.html">
-      <img src="https://via.placeholder.com/60?text=Chair" alt="Luxury Chairs" />
+      <img src="https://via.placeholder.com/60?text=Luxury+Chairs" alt="Luxury Chairs" />
       <h3>Luxury Chairs</h3>
       <p>Thakawat mita do. Sit royally with our best chairs.</p>
     </a>
@@ -144,16 +149,5 @@
 
   <footer>© 2025 theshubhcart. Easy returns. Cash on Delivery. Real deals. 💙</footer>
 
-  <script>
-    function filterProducts() {
-      const input = document.getElementById('searchInput').value.toLowerCase();
-      const cards = document.querySelectorAll('.product-card');
-
-      cards.forEach(card => {
-        const name = card.querySelector('h3').textContent.toLowerCase();
-        card.style.display = name.includes(input) ? 'block' : 'none';
-      });
-    }
-  </script>
 </body>
-  </html>
+</html>
