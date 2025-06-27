@@ -1,160 +1,157 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Profile - TheShubhCart</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f4f4;
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Profile | TheShubhCart</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+        }header {
+        background: linear-gradient(to right, #2d7df4, #71b4fc);
+        padding: 1.2rem 2rem;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom-left-radius: 50px;
     }
 
-    .header {
-      background: linear-gradient(to right, #2196f3, #21cbf3);
-      color: white;
-      padding: 20px;
-      border-bottom-left-radius: 30px;
-      border-bottom-right-radius: 30px;
-      position: relative;
-    }
-
-    .header h2 {
-      margin: 0;
-      font-size: 24px;
-      text-align: left;
+    header h1 {
+        margin: 0;
+        font-size: 1.8rem;
     }
 
     .logout-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background-color: #fff;
-      color: #2196f3;
-      padding: 8px 16px;
-      border-radius: 20px;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-      transition: all 0.2s ease-in-out;
+        background: white;
+        color: #2d7df4;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-weight: bold;
+        cursor: pointer;
     }
 
-    .logout-btn:hover {
-      background-color: #e0e0e0;
+    .container {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    .profile-container {
-      padding: 20px;
+    .profile-info {
+        display: flex;
+        align-items: center;
     }
 
-    .card {
-      background-color: white;
-      border-radius: 15px;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    .profile-info img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-right: 2rem;
+        border: 4px solid #2d7df4;
     }
 
-    .card h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
+    .profile-info h2 {
+        margin: 0 0 0.5rem;
+        color: #333;
     }
 
-    .card p {
-      margin: 0;
-      color: #555;
+    .profile-info p {
+        margin: 0;
+        color: #666;
     }
 
-    .btn-group {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-top: 20px;
+    .button-group {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
     }
 
-    .btn {
-      background-color: #2196f3;
-      color: white;
-      border: none;
-      padding: 12px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: bold;
-      transition: background-color 0.3s;
+    .button-group button {
+        background: #2d7df4;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
     }
 
-    .btn:hover {
-      background-color: #0b7dda;
+    .button-group button:hover {
+        background: #1558c7;
+    }
+
+    .coupon-section {
+        margin-top: 3rem;
     }
 
     .coupon-card {
-      background-color: #fff3e0;
-      border-left: 5px solid #ff9800;
-      padding: 15px;
-      margin-top: 20px;
-      border-radius: 10px;
+        background: #f0f8ff;
+        border-left: 6px solid #2d7df4;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
     }
 
-    .coupon-code {
-      font-weight: bold;
-      color: #e65100;
+    .coupon-card h4 {
+        margin: 0;
+        color: #2d7df4;
     }
 
-    /* Responsive */
-    @media (max-width: 600px) {
-      .btn-group {
-        flex-direction: column;
-      }
-
-      .logout-btn {
-        padding: 6px 12px;
-      }
+    .coupon-card p {
+        margin: 0.3rem 0 0;
     }
-  </style>
+</style>
+
 </head>
 <body>
-
-  <div class="header">
-    <h2>Your Profile</h2>
-    <button class="logout-btn" onclick="logout()">Logout</button>
-  </div>
-
-  <div class="profile-container">
-
-    <div class="card">
-      <h3>Welcome, Rohit Sharma</h3>
-      <p>Phone: +91-9876543210</p>
+    <header>
+        <h1>Your Profile</h1>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </header><div class="container">
+    <div class="profile-info">
+        <img src="https://via.placeholder.com/120" alt="User Image" />
+        <div>
+            <h2>Rohit Sharma</h2>
+            <p>Phone: +91 9876543210</p>
+            <p>Email: rohit@example.com</p>
+        </div>
     </div>
 
-    <div class="btn-group">
-      <button class="btn" onclick="navigateTo('orders')">Your Orders</button>
-      <button class="btn" onclick="navigateTo('wishlist')">Wishlist</button>
-      <button class="btn" onclick="navigateTo('saved')">Saved Items</button>
+    <div class="button-group">
+        <button onclick="alert('My Orders page coming soon')">My Orders</button>
+        <button onclick="alert('Wishlist page coming soon')">Wishlist</button>
+        <button onclick="alert('Track Orders page coming soon')">Track Order</button>
     </div>
 
-    <div class="coupon-card">
-      <h3>Available Coupons</h3>
-      <ul>
-        <li><span class="coupon-code">SHUBH100</span> - Get ₹100 off</li>
-        <li><span class="coupon-code">FREESHIP</span> - Free delivery</li>
-        <li><span class="coupon-code">SAVE20</span> - 20% off up to ₹200</li>
-      </ul>
+    <div class="coupon-section">
+        <h3>Available Coupons</h3>
+        <div class="coupon-card">
+            <h4>SHUBH20</h4>
+            <p>Get 20% off on your next order. Valid till: 30th June</p>
+        </div>
+        <div class="coupon-card">
+            <h4>FREESHIP</h4>
+            <p>Free shipping on orders above ₹499. Valid till: 10th July</p>
+        </div>
+        <div class="coupon-card">
+            <h4>WELCOME50</h4>
+            <p>Flat ₹50 off for first time users. Valid till: 31st Dec</p>
+        </div>
     </div>
+</div>
 
-  </div>
-
-  <script>
-    function navigateTo(section) {
-      alert("Opening " + section + " page...");
-      // You can replace alert with actual navigation logic.
-    }
-
+<script>
     function logout() {
-      alert("Logged out successfully!");
-      // Add logout logic here
+        alert("Logged out successfully");
     }
-  </script>
+</script>
+
 </body>
 </html>
