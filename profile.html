@@ -1,127 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Your Profile - ShubhCart</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
       background-color: #f2f2f2;
     }
-
     .header {
-      background: linear-gradient(135deg, #007BFF, #0056b3);
+      background: linear-gradient(to right, #007bff, #0056b3);
       color: white;
-      padding: 40px 20px 80px;
+      padding: 40px 20px;
       border-bottom-left-radius: 30px;
       border-bottom-right-radius: 30px;
-      position: relative;
       text-align: center;
     }
-
-    .logout-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
+    .profile-box {
       background: white;
-      color: #007BFF;
-      border: none;
-      padding: 8px 14px;
-      border-radius: 20px;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .profile-container {
-      background: white;
-      margin: -50px auto 20px;
       width: 90%;
       max-width: 400px;
-      border-radius: 20px;
+      margin: -60px auto 20px;
       padding: 20px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
       text-align: center;
     }
-
-    .avatar {
-      width: 100px;
-      height: 100px;
-      background-color: #ddd;
+    .profile-pic {
+      width: 90px;
+      height: 90px;
+      background: #ccc;
       border-radius: 50%;
-      margin: 0 auto 15px;
-      border: 3px solid #007BFF;
+      margin: auto;
+      border: 3px solid #007bff;
     }
-
-    .profile-name {
-      font-size: 22px;
-      font-weight: bold;
-      margin-bottom: 4px;
+    .profile-box h2 {
+      margin: 10px 0 5px;
     }
-
-    .profile-email,
-    .profile-phone,
-    .profile-address {
+    .profile-box p {
+      margin: 5px 0;
       color: #555;
       font-size: 14px;
-      margin: 4px 0;
     }
-
     .stats {
-      background: #e6f0ff;
-      margin: 16px 0;
+      background: #e9f2ff;
       padding: 15px;
-      border-radius: 15px;
+      border-radius: 10px;
+      margin-top: 15px;
       text-align: left;
     }
-
     .stats p {
-      margin: 6px 0;
+      margin: 8px 0;
       font-size: 15px;
     }
-
-    .button {
+    .btn {
       display: block;
-      width: 100%;
-      margin: 10px 0;
-      padding: 12px;
-      background-color: #007BFF;
+      background-color: #007bff;
       color: white;
+      text-align: center;
+      padding: 12px;
+      margin: 10px 0;
       border: none;
       border-radius: 10px;
+      text-decoration: none;
       font-size: 16px;
       cursor: pointer;
-      transition: background 0.3s ease;
     }
-
-    .button:hover {
+    .btn:hover {
       background-color: #0056b3;
-    }
-
-    .coupon-card {
-      background: #fff5e6;
-      margin-top: 20px;
-      padding: 15px;
-      border-radius: 15px;
-      text-align: left;
-    }
-
-    .coupon-card h3 {
-      margin-bottom: 10px;
-      font-size: 18px;
-      color: #ff6600;
-    }
-
-    .coupon {
-      background: white;
-      border: 1px dashed #ffa500;
-      padding: 10px;
-      margin-bottom: 8px;
-      border-radius: 10px;
-      font-family: monospace;
-      font-size: 14px;
     }
   </style>
 </head>
@@ -129,32 +77,24 @@
 
   <div class="header">
     <h1>Your Profile</h1>
-    <button class="logout-btn" onclick="alert('Logging out...')">Logout</button>
   </div>
 
-  <div class="profile-container">
-    <div class="avatar"></div>
-    <div class="profile-name">Shubh Kumar</div>
-    <div class="profile-email">shubh@example.com</div>
-    <div class="profile-phone">📞 +91-9876543210</div>
-    <div class="profile-address">🏠 B-123, Model Town, Delhi, India</div>
+  <div class="profile-box">
+    <div class="profile-pic"></div>
+    <h2>Shubh Kumar</h2>
+    <p>shubh@example.com</p>
+    <p>📞 +91-9876543210</p>
+    <p>🏠 B-123, Model Town, Delhi, India</p>
 
     <div class="stats">
       <p>🏷️ Coupons: <strong>3</strong></p>
       <p>🪙 Loyalty Points: <strong>120</strong></p>
     </div>
 
-    <button class="button" onclick="alert('Redirecting to Orders...')">📦 My Orders</button>
-    <button class="button" onclick="alert('Opening Wishlist...')">❤️ My Wishlist</button>
-    <button class="button" onclick="alert('Edit your profile...')">👤 Edit Profile</button>
-
-    <div class="coupon-card">
-      <h3>🎁 Available Coupons</h3>
-      <div class="coupon">SAVE20 - Flat 20% OFF</div>
-      <div class="coupon">FREESHIP - Free Delivery</div>
-      <div class="coupon">FIRSTBUY - ₹100 OFF on 1st Order</div>
-    </div>
+    <a href="orders.html" class="btn">📦 My Orders</a>
+    <a href="wishlist.html" class="btn">❤️ My Wishlist</a>
+    <a href="edit-profile.html" class="btn">👤 Edit Profile</a>
   </div>
 
 </body>
-                                                                                 </html>
+</html>
