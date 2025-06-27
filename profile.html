@@ -3,98 +3,158 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Profile - ShubhCart</title>
+  <title>Your Profile - TheShubhCart</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f2f2f2;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
     }
+
     .header {
-      background: linear-gradient(to right, #007bff, #0056b3);
+      background: linear-gradient(to right, #2196f3, #21cbf3);
       color: white;
-      padding: 40px 20px;
+      padding: 20px;
       border-bottom-left-radius: 30px;
       border-bottom-right-radius: 30px;
-      text-align: center;
+      position: relative;
     }
-    .profile-box {
-      background: white;
-      width: 90%;
-      max-width: 400px;
-      margin: -60px auto 20px;
-      padding: 20px;
-      border-radius: 20px;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .profile-pic {
-      width: 90px;
-      height: 90px;
-      background: #ccc;
-      border-radius: 50%;
-      margin: auto;
-      border: 3px solid #007bff;
-    }
-    .profile-box h2 {
-      margin: 10px 0 5px;
-    }
-    .profile-box p {
-      margin: 5px 0;
-      color: #555;
-      font-size: 14px;
-    }
-    .stats {
-      background: #e9f2ff;
-      padding: 15px;
-      border-radius: 10px;
-      margin-top: 15px;
+
+    .header h2 {
+      margin: 0;
+      font-size: 24px;
       text-align: left;
     }
-    .stats p {
-      margin: 8px 0;
-      font-size: 15px;
-    }
-    .btn {
-      display: block;
-      background-color: #007bff;
-      color: white;
-      text-align: center;
-      padding: 12px;
-      margin: 10px 0;
+
+    .logout-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #fff;
+      color: #2196f3;
+      padding: 8px 16px;
+      border-radius: 20px;
       border: none;
-      border-radius: 10px;
-      text-decoration: none;
-      font-size: 16px;
       cursor: pointer;
+      font-weight: bold;
+      transition: all 0.2s ease-in-out;
     }
+
+    .logout-btn:hover {
+      background-color: #e0e0e0;
+    }
+
+    .profile-container {
+      padding: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      margin: 0;
+      color: #555;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      background-color: #2196f3;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
     .btn:hover {
-      background-color: #0056b3;
+      background-color: #0b7dda;
+    }
+
+    .coupon-card {
+      background-color: #fff3e0;
+      border-left: 5px solid #ff9800;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    .coupon-code {
+      font-weight: bold;
+      color: #e65100;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .btn-group {
+        flex-direction: column;
+      }
+
+      .logout-btn {
+        padding: 6px 12px;
+      }
     }
   </style>
 </head>
 <body>
 
   <div class="header">
-    <h1>Your Profile</h1>
+    <h2>Your Profile</h2>
+    <button class="logout-btn" onclick="logout()">Logout</button>
   </div>
 
-  <div class="profile-box">
-    <div class="profile-pic"></div>
-    <h2>Shubh Kumar</h2>
-    <p>shubh@example.com</p>
-    <p>📞 +91-9876543210</p>
-    <p>🏠 B-123, Model Town, Delhi, India</p>
+  <div class="profile-container">
 
-    <div class="stats">
-      <p>🏷️ Coupons: <strong>3</strong></p>
-      <p>🪙 Loyalty Points: <strong>120</strong></p>
+    <div class="card">
+      <h3>Welcome, Rohit Sharma</h3>
+      <p>Phone: +91-9876543210</p>
     </div>
 
-    <a href="orders.html" class="btn">📦 My Orders</a>
-    <a href="wishlist.html" class="btn">❤️ My Wishlist</a>
-    <a href="edit-profile.html" class="btn">👤 Edit Profile</a>
+    <div class="btn-group">
+      <button class="btn" onclick="navigateTo('orders')">Your Orders</button>
+      <button class="btn" onclick="navigateTo('wishlist')">Wishlist</button>
+      <button class="btn" onclick="navigateTo('saved')">Saved Items</button>
+    </div>
+
+    <div class="coupon-card">
+      <h3>Available Coupons</h3>
+      <ul>
+        <li><span class="coupon-code">SHUBH100</span> - Get ₹100 off</li>
+        <li><span class="coupon-code">FREESHIP</span> - Free delivery</li>
+        <li><span class="coupon-code">SAVE20</span> - 20% off up to ₹200</li>
+      </ul>
+    </div>
+
   </div>
 
+  <script>
+    function navigateTo(section) {
+      alert("Opening " + section + " page...");
+      // You can replace alert with actual navigation logic.
+    }
+
+    function logout() {
+      alert("Logged out successfully!");
+      // Add logout logic here
+    }
+  </script>
 </body>
 </html>
