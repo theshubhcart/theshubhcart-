@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Samsung 55-inch 4K TV",
+    "category": "TV",
+    "price": "₹45,999",
+    "description": "Picture quality that blows your mind. Upgrade now!",
+    "image": "https://via.placeholder.com/300x200.png?text=Samsung+TV"
+  },
+  {
+    "id": 2,
+    "title": "Luxury Perfume",
+    "category": "Perfume",
+    "price": "₹1,299",
+    "description": "Smell rich. Feel richer. Your body deserves this.",
+    "image": "https://via.placeholder.com/300x200.png?text=Perfume"
+  },
+  {
+    "id": 3,
+    "title": "Kent RO Water Purifier",
+    "category": "RO",
+    "price": "₹10,499",
+    "description": "Pani jo sirf saaf nahi, shudh bhi ho. Protect your health!",
+    "image": "https://via.placeholder.com/300x200.png?text=RO"
+  },
+  {
+    "id": 4,
+    "title": "LG Double Door Fridge",
+    "category": "Fridge",
+    "price": "₹17,999",
+    "description": "Store more. Chill more. Designed for Indian homes.",
+    "image": "https://via.placeholder.com/300x200.png?text=Fridge"
+  }
+]
