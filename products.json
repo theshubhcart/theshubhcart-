@@ -1,34 +1,44 @@
 [
   {
-    "id": 1,
-    "title": "Samsung 55-inch 4K TV",
-    "category": "TV",
-    "price": "₹45,999",
-    "description": "Picture quality that blows your mind. Upgrade now!",
-    "image": "https://via.placeholder.com/300x200.png?text=Samsung+TV"
+    "name": "tv",
+    "title": "TV",
+    "image": "tv.png",
+    "link": "tv.html",
+    "tagline": "Picture quality that blows your mind. Upgrade now!"
   },
   {
-    "id": 2,
+    "name": "luxury perfume",
     "title": "Luxury Perfume",
-    "category": "Perfume",
-    "price": "₹1,299",
-    "description": "Smell rich. Feel richer. Your body deserves this.",
-    "image": "https://via.placeholder.com/300x200.png?text=Perfume"
+    "image": "perfume.png",
+    "link": "perfume.html",
+    "tagline": "Smell rich. Feel richer. Your body deserves this."
   },
   {
-    "id": 3,
-    "title": "Kent RO Water Purifier",
-    "category": "RO",
-    "price": "₹10,499",
-    "description": "Pani jo sirf saaf nahi, shudh bhi ho. Protect your health!",
-    "image": "https://via.placeholder.com/300x200.png?text=RO"
+    "name": "ro water purifier",
+    "title": "RO Water Purifier",
+    "image": "ro.png",
+    "link": "ro.html",
+    "tagline": "Pani jo sirf saaf nahi, shudh bhi ho. Protect your health!"
   },
   {
-    "id": 4,
-    "title": "LG Double Door Fridge",
-    "category": "Fridge",
-    "price": "₹17,999",
-    "description": "Store more. Chill more. Designed for Indian homes.",
-    "image": "https://via.placeholder.com/300x200.png?text=Fridge"
+    "name": "refrigerator",
+    "title": "Refrigerator",
+    "image": "fridge.png",
+    "link": "fridge.html",
+    "tagline": "Store more. Chill more. Designed for Indian homes."
+  },
+  {
+    "name": "shoes",
+    "title": "Shoes",
+    "image": "shoes.png",
+    "link": "shoes.html",
+    "tagline": "Style that runs with you. Comfortable. Reliable."
+  },
+  {
+    "name": "luxury chairs",
+    "title": "Luxury Chairs",
+    "image": "chair.png",
+    "link": "chairs.html",
+    "tagline": "Thakawat mita do. Sit royally with our best chairs."
   }
 ]
