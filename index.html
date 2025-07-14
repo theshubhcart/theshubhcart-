@@ -22,7 +22,7 @@
     .logo {
       font-size: 1.6rem;
       font-weight: bold;
-      pointer-events: none; /* not clickable */
+      pointer-events: none;
     }
     .icons {
       display: flex;
@@ -98,38 +98,8 @@
   Shubh shopping ki shuruaat, <strong>theshubhcart</strong> ke sath
 </div>
 
-<div class="grid" id="productGrid">
-  <a href="tv.html" class="card" data-name="tv">
-    <img src="tv.png" alt="TV" />
-    <h3>TV</h3>
-    <p>Picture quality that blows your mind. Upgrade now!</p>
-  </a>
-  <a href="perfume.html" class="card" data-name="luxury perfume">
-    <img src="perfume.png" alt="Perfume" />
-    <h3>Luxury Perfume</h3>
-    <p>Smell rich. Feel richer. Your body deserves this.</p>
-  </a>
-  <a href="ro.html" class="card" data-name="ro water purifier">
-    <img src="ro.png" alt="RO" />
-    <h3>RO Water Purifier</h3>
-    <p>Pani jo sirf saaf nahi, shudh bhi ho. Protect your health!</p>
-  </a>
-  <a href="fridge.html" class="card" data-name="refrigerator">
-    <img src="fridge.png" alt="Fridge" />
-    <h3>Refrigerator</h3>
-    <p>Store more. Chill more. Designed for Indian homes.</p>
-  </a>
-  <a href="shoes.html" class="card" data-name="shoes">
-    <img src="shoes.png" alt="Shoes" />
-    <h3>Shoes</h3>
-    <p>Style that runs with you. Comfortable. Reliable.</p>
-  </a>
-  <a href="chairs.html" class="card" data-name="luxury chairs">
-    <img src="chair.png" alt="Chair" />
-    <h3>Luxury Chairs</h3>
-    <p>Thakawat mita do. Sit royally with our best chairs.</p>
-  </a>
-</div>
+<!-- 🆕 JSON-based dynamic product section -->
+<div class="grid" id="productGrid"></div>
 
 <footer>
   © 2025 theshubhcart. Easy returns. Cash on Delivery. Real deals. 💙
@@ -137,19 +107,41 @@
 
 <script>
   const searchInput = document.getElementById("searchInput");
-  const cards = document.querySelectorAll(".card");
+  const productGrid = document.getElementById("productGrid");
 
-  searchInput.addEventListener("input", function () {
-    const value = this.value.toLowerCase();
-    cards.forEach(card => {
-      const name = card.dataset.name.toLowerCase();
-      if (name.includes(value)) {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
+  // Load products from JSON file
+  fetch("products.json")
+    .then((res) => res.json())
+    .then((products) => {
+      products.forEach((product) => {
+        const card = document.createElement("a");
+        card.href = product.link;
+        card.className = "card";
+        card.dataset.name = product.name;
+
+        card.innerHTML = `
+          <img src="${product.image}" alt="${product.name}" />
+          <h3>${product.title}</h3>
+          <p>${product.tagline}</p>
+        `;
+
+        productGrid.appendChild(card);
+      });
+
+      // Search functionality after cards are loaded
+      const cards = document.querySelectorAll(".card");
+      searchInput.addEventListener("input", function () {
+        const value = this.value.toLowerCase();
+        cards.forEach(card => {
+          const name = card.dataset.name.toLowerCase();
+          if (name.includes(value)) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
     });
-  });
 </script>
 
 </body>
